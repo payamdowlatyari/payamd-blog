@@ -8,7 +8,7 @@ type CommentListProps = {
 }
 
 export default function CommentList({ comments, onDelete }: CommentListProps) {
-  const { user } = useAuth0()
+  const { user } = useAuth0();
 
   return (
     <div className="space-y-6 mt-10">
