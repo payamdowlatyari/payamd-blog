@@ -17,6 +17,8 @@ export type Post = {
   slug?: string
   title?: string
   author?: string
+  img?: string
+  medium?: string
   date?: Date
   content?: string
   excerpt?: string

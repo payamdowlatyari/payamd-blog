@@ -1,6 +1,8 @@
 ---
 title: "It Is Not All About Technology"
 excerpt: "The concept of technology has been used broadly and repeatedly. Society, on the other hand, has its own meaning especially when is used in relation with effects of technology."
+img: "https://storage.googleapis.com/www.payamd.com/Portfolio/technology.webp"
+medium: "https://medium.com/@pdowlatyari/it-is-not-all-about-technology-3c24e8cfb8cb"
 date: "2019-10-25"
 ---
 
