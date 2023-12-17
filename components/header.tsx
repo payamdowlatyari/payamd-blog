@@ -6,8 +6,24 @@ export default function Header() {
     <header className="py-6">
       <Container>
         <nav className="flex space-x-4">
-          <Link href="/">About</Link>
-          <Link href="/posts">Posts</Link>
+          <Link 
+            className='font-bold uppercase text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/"
+            >
+            About
+            </Link>
+          <Link 
+            className='font-bold uppercase text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/posts"
+            >
+            Posts
+            </Link>
+            <Link 
+            className='font-bold uppercase text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/books"
+            >
+            Books
+            </Link>
         </nav>
       </Container>
     </header>

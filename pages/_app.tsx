@@ -1,5 +1,5 @@
-import 'tailwindcss/tailwind.css'
-
+import 'tailwindcss/tailwind.css';
+import 'rsuite/dist/rsuite.min.css';
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Header from '../components/header'
@@ -19,11 +19,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
         <title>My Web Blog</title>
       </Head>
-
       <Header />
-
-      <main className="py-14">
-        <Component {...pageProps} />
+        <main className="py-14">
+          <Component {...pageProps} />
       </main>
     </Auth0Provider>
   )

@@ -22,3 +22,15 @@ export type Post = {
   excerpt?: string
   [key: string]: any
 }
+
+export type Book = {
+  slug?: string
+  title?: string
+  author?: string
+  img?: string
+  goodreads?: string
+  date?: Date
+  content?: string
+  excerpt?: string
+  [key: string]: any
+}

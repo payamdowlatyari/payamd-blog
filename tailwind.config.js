@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
-  variants: {
-    extend: {
-      opacity: ['disabled'],
-    },
+  images: {
+    domains: ['storage.googleapis.com'],
   },
   plugins: [require('@tailwindcss/typography')],
 }

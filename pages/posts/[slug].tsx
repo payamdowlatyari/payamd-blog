@@ -29,9 +29,11 @@ export default function PostPage({
         <div>
           <article>
             <header>
-              <h1 className="text-4xl font-bold">{post.title}</h1>
+              <h1 
+              className="text-3xl font-bold font-sans"
+              >{post.title}</h1>
               {post.excerpt ? (
-                <p className="mt-2 text-xl">{post.excerpt}</p>
+                <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
               ) : null}
               <time className="flex mt-2 text-gray-400">
                 {distanceToNow(new Date(post.date))}
@@ -39,7 +41,7 @@ export default function PostPage({
             </header>
 
             <div
-              className="prose mt-10"
+              className="prose mt-10 font-sans"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
