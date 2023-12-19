@@ -1,29 +1,29 @@
 import type { InferGetStaticPropsType } from 'next'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
+import Link from 'next/link'
+import Image from 'next/image'
 import Comment from '../../components/comment'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
-import { getAllPosts, getPostBySlug } from '../../lib/getPost'
+import { getAllFilms, getFilmBySlug } from '../../lib/getFilm'
 import markdownToHtml from '../../lib/markdownToHtml'
+import { Tooltip, Whisper} from 'rsuite';
 import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Whisper, Tooltip } from 'rsuite'
 
-export default function PostPage({
-  post,
+export default function FilmPage({
+  film,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
 
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !film?.slug) {
     return <ErrorPage statusCode={404} />
   }
 
   return (
     <Container>
       <Head>
-        <title>{post.title} | My Web Blog</title>
+        <title>{film.title} | My Web Blog</title>
       </Head>
 
       {router.isFallback ? (
@@ -34,36 +34,37 @@ export default function PostPage({
             <header>
               <h1 
               className="text-3xl font-bold font-sans"
-              >{post.title}</h1>
-              {post.excerpt ? (
-                <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
+              >{film.title}</h1>
+              {film.excerpt ? (
+                <p className="mt-2 text-lg font-sans">{film.excerpt}</p>
               ) : null}
-             <p className='font-sans uppercase'> {post.author}</p>
+              <p className='font-sans uppercase'> {film.director}</p>
               <time className="flex mt-2 text-gray-400">
-                {distanceToNow(new Date(post.date))}
+                {distanceToNow(new Date(film.date))}
               </time>
             </header>
-            <p className='flex justify-end content-around'>
+             <p className='flex justify-end content-around'>
              <Whisper 
                 placement="left" 
                 controlId="control-id-hover" 
                 trigger="hover" 
-                speaker={<Tooltip>read this article on medium.com</Tooltip>}>    
+                speaker={<Tooltip>check out imdb.com</Tooltip>}>
                 <Link 
-                href={post.medium} target='_blank'>
+                href={film.imdb} target='_blank'>
                 <Image
-                src="/Medium_logo.svg.png"
-                alt="book"
+                src="/IMDB_Logo_2016.svg.png"
+                alt="film"
                 className='rounded inline-block'
-                width={100}
+                width={40}
                 height={20}
-                />            
+                />
+               <span className='p-1 font-semibold text-slate-800'>{film.rate}</span>    
                 </Link>
-                </Whisper>
-                </p>   
-            <div
-              className="prose mt-10 font-sans"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+            </Whisper>
+             </p>
+             <div
+              className="prose mt-10 mb-4 font-sans"
+              dangerouslySetInnerHTML={{ __html: film.content }}
             />
           </article>
 
@@ -81,21 +82,22 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const film = getFilmBySlug(params.slug, [
     'slug',
     'title',
     'excerpt',
     'date',
     'content',
-    'author',
-    'medium'
+    'director',
+    'imdb',
+    'rate'
   ])
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(film.content || '')
 
   return {
     props: {
-      post: {
-        ...post,
+      film: {
+        ...film,
         content,
       },
     },
@@ -103,10 +105,10 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const films = getAllFilms(['slug'])
 
   return {
-    paths: posts.map(({ slug }) => {
+    paths: films.map(({ slug }) => {
       return {
         params: {
           slug,

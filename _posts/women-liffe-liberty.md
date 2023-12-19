@@ -1,6 +1,7 @@
 ---
 title: "Women, Life, Liberty: Story of a Social Movement"
 excerpt: "October 22nd, 2022, was the day that Berlin witnessed around eighty thousand protesters who marched to show their support for the most expansive uprising against the Islamic government that has ruled Iran since the 1979 revolution."
+author: "Payam Dowlatyari"
 img: "https://storage.googleapis.com/www.payamd.com/Portfolio/women-life-liberty.webp"
 medium: "https://medium.com/@pdowlatyari/women-life-liberty-story-of-a-social-movement-7e1ccae296af"
 date: "2022-10-31"

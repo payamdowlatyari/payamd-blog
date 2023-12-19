@@ -3,57 +3,58 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
-import { getAllBooks } from '../../lib/getBook'
+import { getAllFilms } from '../../lib/getFilm'
 import { Grid, Row, Col, Tooltip, Whisper } from 'rsuite';
 
 export default function NotePage({
-  allBooks,
+  allFilms,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
       <Grid fluid>
-      {allBooks.length ? (
-        allBooks.map((book) => (
+      {allFilms.length ? (
+        allFilms.map((film) => (
         <Row className='p-3'>
-          <article key={book.slug} className="mb-10">
+          <article key={film.slug} className="mb-10">
             <Col lg={4} xs={24} className='p-1'>
                 <Image
-                src={book.img}
-                alt="book"
+                src={film.img}
+                alt="film"
                 className='rounded'
-                width={120}
-                height={60}
+                width={150}
+                height={75}
                 />
             </Col>
             <Col lg={20} xs={24}>
             <Link
-              as={`/books/${book.slug}`}
-              href="/books/[slug]"
+              as={`/films/${film.slug}`}
+              href="/films/[slug]"
               className='text-lg leading-6 text-inherit font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline font-sans' 
             >
-              {book.title}
+              {film.title}
             </Link>
-            <p className='font-sans uppercase'>{book.author}</p>
-            <p className='font-sans py-1'>{book.excerpt}</p>
+            <p className='font-sans uppercase'>{film.director}</p>
+            <p className='font-sans py-1'>{film.excerpt}</p>
             <div className="text-gray-400">
-              <time>{distanceToNow(new Date(book.date))}</time>
+              <time>{distanceToNow(new Date(film.date))}</time>
             </div>
             <p className='flex justify-end content-around'>
              <Whisper 
                 placement="left" 
                 controlId="control-id-hover" 
                 trigger="hover" 
-                speaker={<Tooltip>goodreads.com</Tooltip>}>    
+                speaker={<Tooltip>imdb.com</Tooltip>}>    
                 <Link 
-                href={book.goodreads} target='_blank'>
+                href={film.imdb} target='_blank'>
                 <Image
-                src="/Goodreads-Logo.webp"
-                alt="book"
+                src="/IMDB_Logo_2016.svg.png"
+                alt="film"
                 className='rounded inline-block'
-                width={100}
+                width={40}
                 height={20}
-                />            
+                /> 
+                <span className='p-1 font-semibold text-slate-800'>{film.rate}</span>    
                 </Link>
                 </Whisper>
                 </p>   
@@ -63,7 +64,7 @@ export default function NotePage({
           </Row>  
         ))
       ) : (
-        <p>No blog booked yet :/</p>
+        <p>No blog film yet :/</p>
       )}
       </Grid>   
     </Container>
@@ -71,9 +72,9 @@ export default function NotePage({
 }
 
 export async function getStaticProps() {
-  const allBooks = getAllBooks(['slug', 'title', 'excerpt', 'date', 'author', 'img', 'goodreads'])
+  const allFilms = getAllFilms(['slug', 'title', 'excerpt', 'date', 'director', 'img', 'imdb', 'rate'])
 
   return {
-    props: { allBooks },
+    props: { allFilms },
   }
 }

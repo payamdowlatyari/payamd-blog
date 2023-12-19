@@ -38,18 +38,14 @@ export default function BookPage({
               {book.excerpt ? (
                 <p className="mt-2 text-lg font-sans">{book.excerpt}</p>
               ) : null}
-              <p className='font-sans'> {book.author}</p>
+              <p className='font-sans uppercase'> {book.author}</p>
               <time className="flex mt-2 text-gray-400">
                 {distanceToNow(new Date(book.date))}
               </time>
             </header>
-
-            <div
-              className="prose mt-10 mb-4 font-sans"
-              dangerouslySetInnerHTML={{ __html: book.content }}
-            />
+             <p className='flex justify-end content-around'>
              <Whisper 
-                placement="right" 
+                placement="left" 
                 controlId="control-id-hover" 
                 trigger="hover" 
                 speaker={<Tooltip>read more on goodreads.com</Tooltip>}>
@@ -64,6 +60,11 @@ export default function BookPage({
                 />
                 </Link>
             </Whisper>
+             </p>
+             <div
+              className="prose mt-10 mb-4 font-sans"
+              dangerouslySetInnerHTML={{ __html: book.content }}
+            />
           </article>
 
           <Comment />

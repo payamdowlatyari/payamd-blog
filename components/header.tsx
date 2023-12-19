@@ -24,6 +24,12 @@ export default function Header() {
             >
             Books
             </Link>
+            <Link 
+            className='font-bold uppercase text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/films"
+            >
+            Films
+            </Link>
         </nav>
       </Container>
     </header>

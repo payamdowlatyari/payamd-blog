@@ -36,3 +36,16 @@ export type Book = {
   excerpt?: string
   [key: string]: any
 }
+
+export type Film = {
+  slug?: string
+  title?: string
+  director?: string
+  img?: string
+  imdb?: string
+  date?: Date
+  content?: string
+  excerpt?: string
+  rate?: string
+  [key: string]: any
+}

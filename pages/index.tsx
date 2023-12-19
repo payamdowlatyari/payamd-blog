@@ -14,8 +14,8 @@ function HomePage() {
             My name is Payam Dowlatyari.
           </h1>
           <p className='font-sans'>
-            I'm a Software Engineer, UX Designer, Photographer, and Blogger. 
-            I studied at UC Irvine and have been working in Silicon Valley since 2020. 
+          I am a professional Software Engineer and UX Designer, graduated from UC Irvine and have been working in the tech industry since 2020. 
+          I am a hobbyist Photographer and Blogger interested in reading about psychology, sociology, philosophy, history, politics, and the like.           
           </p>
           </div>
           </Col>
@@ -24,13 +24,15 @@ function HomePage() {
         <Col lg={12} xs={24}>
         <div className="space-y-6 my-4 mt-6">
           <p className='font-sans'>
-          I'm interested in reading about psychology, sociology, philosophy, history, and the like, 
-          and enjoy walking, cycling, and taking photographs. 
-          Although I am not a writer, I like to write analytical essays, once in a while, on the topics I read about,
-           providing my opinions on the matter, only for the record so that I can assess my philosophy and outlook in the future. 
-           There is also a comment section for anyone who would like to present their views on the subject. 
+          I like to bring my thoughts on paper and write analytical essays, once in a while, on the topics I read about and matter to me as a member of society. 
           </p>
-
+          <p className='font-sans'>
+          In this blog, I provide my opinions on different issues, only for the record so that I can assess my philosophy and outlook in the future. 
+          I also introduce books and films I've read and watched recently and found impressive and write a brief review sharing my insights.
+          </p>
+          <p className='font-sans'>
+          There is also a comment section for anyone who would like to share their views about the topic with me and others. 
+          </p>
         </div>
         </Col>
         <Col lg={12} xs={24}>

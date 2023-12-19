@@ -33,9 +33,15 @@ export default function NotePage({
             >
               {post.title}
             </Link>
-            <p>
+            <p className='font-sans uppercase'>{post.author}</p>
+           
+            <p className='font-sans py-1'>{post.excerpt}</p>
+            <div className="text-gray-400">
+              <time>{distanceToNow(new Date(post.date))}</time>
+            </div>
+            <p className='flex justify-end content-around'>
              <Whisper 
-                placement="right" 
+                placement="left" 
                 controlId="control-id-hover" 
                 trigger="hover" 
                 speaker={<Tooltip>medium.com</Tooltip>}>    
@@ -51,10 +57,7 @@ export default function NotePage({
                 </Link>
                 </Whisper>
                 </p>   
-            <p className='font-sans'>{post.excerpt}</p>
-            <div className="text-gray-400">
-              <time>{distanceToNow(new Date(post.date))}</time>
-            </div>
+           
             </Col>
           </article>
           </Row>
@@ -68,7 +71,7 @@ export default function NotePage({
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['slug', 'title', 'excerpt', 'date', 'img', 'medium'])
+  const allPosts = getAllPosts(['slug', 'title', 'excerpt', 'date', 'img', 'medium', 'author'])
 
   return {
     props: { allPosts },
