@@ -1,6 +1,8 @@
 import Container from '../components/container'
 import Image from 'next/image'
-import { Grid, Row, Col, Tooltip, Whisper } from 'rsuite';
+import Link from 'next/link'
+
+import { Grid, Row, Col, Panel } from 'rsuite';
 
 function HomePage() {
   return (
@@ -8,50 +10,77 @@ function HomePage() {
       <Container>
         <Grid fluid>
          <Row>
-          <Col lg={24} xs={24}>
-        <div className="space-y-6">
-          <h1 className="text-2xl font-bold font-sans">
-            My name is Payam Dowlatyari.
-          </h1>
-          <p className='font-sans'>
-          I am a professional Software Engineer and UX Designer, graduated from UC Irvine and have been working in the tech industry since 2020. 
-          I am a hobbyist Photographer and Blogger interested in reading about psychology, sociology, philosophy, history, politics, and the like.           
-          </p>
-          </div>
+         <Col md={24} sm={24}>
+         <Panel>
+         <h3 className='font-sans'>Welcome to my Blog!</h3>
+         <p className='font-sans text-base py-2'>
+         My name is Payam, and here,
+         I write about different issues of the day, 
+         introduce books, and films I've read and watched recently.
+         </p>
+          </Panel>
           </Col>
         </Row>
         <Row>
-        <Col lg={12} xs={24}>
-        <div className="space-y-6 my-4 mt-6">
-          <p className='font-sans'>
-          I like to bring my thoughts on paper and write analytical essays, once in a while, on the topics I read about and matter to me as a member of society. 
-          </p>
-          <p className='font-sans'>
-          In this blog, I provide my opinions on different issues, only for the record so that I can assess my philosophy and outlook in the future. 
-          I also introduce books and films I've read and watched recently and found impressive and write a brief review sharing my insights.
-          </p>
-          <p className='font-sans'>
-          There is also a comment section for anyone who would like to share their views about the topic with me and others. 
-          </p>
-        </div>
-        </Col>
-        <Col lg={12} xs={24}>
-
-        <div className="container max-w-3xl m-auto px-2 mt-4">
+        <Col md={12} sm={24}>
+        <Panel>
+       
         <Image
-          src="https://storage.googleapis.com/www.payamd.com/Portfolio/me-camera3-color.jpeg"
-          alt="my desk"
-          className='rounded'
-          width={1920 / 4}
-          height={1280 / 4}
+          src="https://storage.googleapis.com/www.payamd.com/Portfolio/women-life-liberty.webp"
+          alt="wall"
+          className='rounded py-2'
+          width={250}
+          height={150}
         />
-      </div>
+        <h4 className='font-sans'>Women, Life, Liberty</h4>  
+        <p className='font-sans text-base text-slate-700 uppercase font-semibold'>Payam Dowlatyari</p>
+          <p className='font-sans pb-2'>
+            About a year a go, Iranian people marched into the streets to oppose the systematic violation of human rights by the government.
+
+          </p>
+          <Link 
+            className='font-bold text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/posts"
+            >
+            Read my latest articles  
+            </Link>
+        
+        </Panel>
+        </Col>
+
+        <Col md={12} sm={24}>
+        <Panel>
+        <h4 className='font-sans'>The Drama of the Gifted Child</h4>  
+        <p className='font-sans text-base text-slate-700 uppercase font-semibold'>Alice Miller</p>
+        <p className='font-sans pb-2'>
+          A book about psychology of childhood
+          </p>
+        <Link 
+            className='font-bold text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/books"
+            >
+            Check out the list of books  
+            </Link>
+        </Panel>
+        </Col>
+        <Col md={12} sm={24}>
+        <Panel>
+        <h4 className='font-sans'>Fanny and Alexander (1982)</h4>  
+        <p className='font-sans text-base text-slate-700 uppercase font-semibold'>Ingmar Bergman</p>
+        <p className='font-sans pb-2'>
+          A classic European film 
+          </p>
+        <Link 
+            className='font-bold text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            href="/films"
+            > See more films  
+            </Link>
+        </Panel>
         </Col>
         </Row> 
         </Grid>
       </Container>
 
-     
     </>
   )
 }

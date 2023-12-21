@@ -29,7 +29,7 @@ export default function NotePage({
             <Link
               as={`/books/${book.slug}`}
               href="/books/[slug]"
-              className='text-lg leading-6 text-inherit font-bold hover:text-inherit 
+              className='text-lg leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline font-sans' 
             >
               {book.title}

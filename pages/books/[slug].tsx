@@ -36,7 +36,9 @@ export default function BookPage({
               className="text-3xl font-bold font-sans"
               >{book.title}</h1>
               {book.excerpt ? (
-                <p className="mt-2 text-lg font-sans">{book.excerpt}</p>
+                <p className="mt-2 text-lg font-sans">
+                  {book.excerpt}
+                  </p>
               ) : null}
               <p className='font-sans uppercase'> {book.author}</p>
               <time className="flex mt-2 text-gray-400">
