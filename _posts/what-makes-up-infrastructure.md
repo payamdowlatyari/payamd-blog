@@ -27,14 +27,16 @@ Regarding infrastructure, we may not be able to point to a specific object, mode
 
 Considering the facts mentioned above, one can have a bit of an understanding of what infrastructure means and why it matters. Indeed, one of the most essential aspects of infrastructure is the power of making connections. As infrastructure becomes stronger in developing connections, people use it more often. As a result, it becomes part of people’s routine. At that point, it becomes invisible. Lastly, we should always keep that in mind if something is invisible to us does not mean it cannot influence our lives. As everything has changed in recent years, the concept of infrastructure has evolved. We can even think of technology as an infrastructure that has become the foundation of our society.
 
-References
+----
 
-How Google Search Works | Our Mission. (n.d.). Retrieved November 14, 2019, from https://www.google.com/search/howsearchworks/mission/
+#### References
 
-Goldman, E. (2008). Search engine bias and the demise of search engine utopianism. In Web Search (pp. 121–133). Springer, Berlin, Heidelberg.
+_How Google Search Works | Our Mission. (n.d.). Retrieved November 14, 2019, from [Google](https://www.google.com/search/howsearchworks/mission/)_
 
-Alexa.com. (2019). Alexa — Top sites. [online] Available at: https://www.alexa.com/topsites [Accessed 14 Nov. 2019].
+_Goldman, E. (2008). Search engine bias and the demise of search engine utopianism. In Web Search (pp. 121–133). Springer, Berlin, Heidelberg._
 
-Star, S., & Bowker, G. (2006). How to infrastructure. In L. Lievrouw & S. Livingstone (Eds.), Handbook of New Media: Social Shaping and Social Consequences of ICTs (Updated Student Edition, pp. 230–245). London, UK: Sage.
+_Alexa.com. (2019). Alexa — Top sites. [online] Available at: [Alexa](https://www.alexa.com/topsites) [Accessed 14 Nov. 2019]._
 
-Speretta, M., & Gauch, S. (2005, September). Personalized search based on user search histories. In Proceedings of the 2005 IEEE/WIC/ACM international conference on web intelligence (pp. 622–628). IEEE Computer Society.
+_Star, S., & Bowker, G. (2006). How to infrastructure. In L. Lievrouw & S. Livingstone (Eds.), Handbook of New Media: Social Shaping and Social Consequences of ICTs (Updated Student Edition, pp. 230–245). London, UK: Sage._
+
+_Speretta, M., & Gauch, S. (2005, September). Personalized search based on user search histories. In Proceedings of the 2005 IEEE/WIC/ACM international conference on web intelligence (pp. 622–628). IEEE Computer Society._

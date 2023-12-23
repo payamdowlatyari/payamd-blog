@@ -49,3 +49,13 @@ export type Film = {
   rate?: string
   [key: string]: any
 }
+
+export type Photo = {
+  slug?: string
+  title?: string
+  src?: string
+  date?: Date
+  content?: string
+  excerpt?: string
+  [key: string]: any
+}

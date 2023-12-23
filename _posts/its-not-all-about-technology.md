@@ -23,12 +23,14 @@ There is another academic paper, about technological revolution and its effects 
 
 Properly speaking, as studies show, technological changes can impact our lives. However, it is not only the power of technology that creates and shapes society, but the power also belongs to the culture that decides to what degree technology can afford to influence it. As people from diverse groups, with different ages, socioeconomic classes, geographic areas, nationalities, cultures, backgrounds, etc. use technology, it must be adapted and designed specifically for its audience based upon their various needs, goals, and expectations. While there is no doubt that technology is an influential factor in developing society, it is a society that forms itself and modifies the way technology works. From a sociotechnical perspective, society and technology are not living in separate spheres but they are interrelated concepts that both have positive and negative effects on one another.
 
-References
+----
 
-Hesketh, B., & Graco, W. (2015). Technological Change and the Sociotechnical System, Applied Psychology of. International Encyclopedia of the Social & Behavioral Sciences, 104–108.
+#### References
 
-Kline, R. (2015). Technological Determinism. International Encyclopedia of the Social & Behavioral Sciences, 109–112.
+_Hesketh, B., & Graco, W. (2015). Technological Change and the Sociotechnical System, Applied Psychology of. International Encyclopedia of the Social & Behavioral Sciences, 104–108._
 
-Kling, R. (1999). What is social informatics and why does it matter? D-Lib Magazine, 5(1). Retrieved from http://www.dlib.org/dlib/january99/kling/01kling.html
+_Kline, R. (2015). Technological Determinism. International Encyclopedia of the Social & Behavioral Sciences, 109–112._
 
-Marche, S. (2012, May). Is Facebook Making Us Lonely? The Atlantic. Retrieved from https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-makinguslonely/308930/
+_Kling, R. (1999). What is social informatics and why does it matter? D-Lib Magazine, 5(1). Retrieved from [dlib.org](http://www.dlib.org/dlib/january99/kling/01kling.html)_
+
+_Marche, S. (2012, May). Is Facebook Making Us Lonely? The Atlantic. Retrieved from [theatlantic.com](https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-makinguslonely/308930/)_

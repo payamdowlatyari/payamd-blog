@@ -63,7 +63,7 @@ export default function FilmPage({
             </Whisper>
              </p>
              <div
-              className="prose mt-10 mb-4 font-sans"
+              className="text-base mt-10 mb-4 font-sans"
               dangerouslySetInnerHTML={{ __html: film.content }}
             />
           </article>

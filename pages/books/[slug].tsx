@@ -64,7 +64,7 @@ export default function BookPage({
             </Whisper>
              </p>
              <div
-              className="prose mt-10 mb-4 font-sans"
+              className="text-base mt-10 mb-4 font-sans"
               dangerouslySetInnerHTML={{ __html: book.content }}
             />
           </article>

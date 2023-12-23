@@ -62,7 +62,7 @@ export default function PostPage({
                 </Whisper>
                 </p>   
             <div
-              className="prose mt-10 font-sans"
+              className="text-base mt-10 font-sans"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
