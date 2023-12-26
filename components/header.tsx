@@ -5,39 +5,39 @@ export default function Header() {
   return (
     <header className="py-6">
       <Container>
-        <nav className="flex space-x-4">
+        <nav className="flex flex-wrap space-x-2">
           <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/"
             >
             Home
             </Link>
             <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/about"
             >
             About
             </Link>
           <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/posts"
             >
             Posts
             </Link>
             <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/books"
             >
             Books
             </Link>
             <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/films"
             >
             Films
             </Link>
             <Link 
-            className='font-bold uppercase text-slate-500 hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline' 
+            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/photos"
             >
             Photos

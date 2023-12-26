@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Clone and deploy your own Next.js portfolio in minutes."
+          content="A blog for my posts, books, films, and photos."
         />
         <title>My Web Blog</title>
       </Head>

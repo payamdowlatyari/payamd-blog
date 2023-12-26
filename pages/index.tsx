@@ -1,7 +1,6 @@
 import Container from '../components/container'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { Grid, Row, Col, Panel } from 'rsuite';
 
 function HomePage() {
