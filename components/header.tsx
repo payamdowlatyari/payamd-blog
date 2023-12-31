@@ -10,12 +10,6 @@ export default function Header() {
             className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
             href="/"
             >
-            Home
-            </Link>
-            <Link 
-            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline' 
-            href="/about"
-            >
             About
             </Link>
           <Link 
