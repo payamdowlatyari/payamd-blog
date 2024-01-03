@@ -2,9 +2,11 @@ import 'tailwindcss/tailwind.css';
 import 'rsuite/dist/rsuite.min.css';
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Header from '../components/header'
+import Header from '../components/header';
 import { Auth0Provider } from '@auth0/auth0-react'
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
+import 'css/tailwind.css'
+
 import Footer from '../components/footer';
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Grid, Row, Col, Panel, Tag } from 'rsuite';
 
-
 const getTag = (text: string) =>{
   return <Tag size="lg">{text}</Tag>;
 }
@@ -37,7 +36,7 @@ function HomePage() {
           <Image
             src="https://storage.googleapis.com/www.payamd.com/Portfolio/me-camera3-color.jpeg"
             alt="my photo"
-            className='rounded'
+            className='rounded grayscale'
             width={320}
             height={240}
           />
@@ -54,7 +53,7 @@ function HomePage() {
               <Image
                 src="https://storage.googleapis.com/www.payamd.com/Portfolio/women-life-liberty.webp"
                 alt="wall"
-                className='rounded'
+                className='rounded grayscale hover:grayscale-0 duration-500 ease-in-out'
                 width={320}
                 height={240}
               />

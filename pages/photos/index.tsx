@@ -24,7 +24,7 @@ export default function NotePage({
             <Image
                 src={photo.src}
                 alt="photo"
-                className='rounded'
+                className='rounded grayscale hover:grayscale-0 duration-500 ease-in-out'
                 width={300}
                 height={200}
                 />

@@ -57,7 +57,6 @@ export default function NotePage({
                 </Link>
                 </Whisper>
                 </p>   
-   
             </Col>
           </article>
           </Row>  
