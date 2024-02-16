@@ -31,12 +31,6 @@ export default function Header() {
           >
             Films
           </Link>
-          <Link
-            className='font-sans font-bold uppercase text-slate-500 border-b-2 border-b-transparent hover:text-inherit hover:no-underline hover:border-b-black focus:text-inherit focus:border-b-black focus:no-underline hover:duration-500'
-            href="/photos"
-          >
-            Photos
-          </Link>
         </nav>
       </Container>
     </header>
