@@ -27,7 +27,7 @@ Regarding infrastructure, we may not be able to point to a specific object, mode
 
 Considering the facts mentioned above, one can have a bit of an understanding of what infrastructure means and why it matters. Indeed, one of the most essential aspects of infrastructure is the power of making connections. As infrastructure becomes stronger in developing connections, people use it more often. As a result, it becomes part of people’s routine. At that point, it becomes invisible. Lastly, we should always keep that in mind if something is invisible to us does not mean it cannot influence our lives. As everything has changed in recent years, the concept of infrastructure has evolved. We can even think of technology as an infrastructure that has become the foundation of our society.
 
-----
+---
 
 #### References
 

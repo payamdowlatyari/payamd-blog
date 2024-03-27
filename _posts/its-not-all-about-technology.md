@@ -23,7 +23,7 @@ There is another academic paper, about technological revolution and its effects 
 
 Properly speaking, as studies show, technological changes can impact our lives. However, it is not only the power of technology that creates and shapes society, but the power also belongs to the culture that decides to what degree technology can afford to influence it. As people from diverse groups, with different ages, socioeconomic classes, geographic areas, nationalities, cultures, backgrounds, etc. use technology, it must be adapted and designed specifically for its audience based upon their various needs, goals, and expectations. While there is no doubt that technology is an influential factor in developing society, it is a society that forms itself and modifies the way technology works. From a sociotechnical perspective, society and technology are not living in separate spheres but they are interrelated concepts that both have positive and negative effects on one another.
 
-----
+---
 
 #### References
 

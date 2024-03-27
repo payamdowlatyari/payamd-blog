@@ -29,7 +29,7 @@ Finally, the Shah and his supporters worked closely with the US and Britain to o
 
 With the collapse of the monarchy, many further pillars of society collapsed. Iranians realized they lost their freedom in considerable aspects of their lives, such as the right to choose their personal beliefs and practice religion. Women were now deprived of their rights and liberty since the earlier modern judiciary system changed to an outdated dogmatic way of interpreting the laws. Like before the 1979 revolution, people became voiceless a few months after the referendum in which they chose their form of government. In the 1997 and 2009 presidential elections, many Iranians became optimistic and had some degree of hope that change would be possible. Yet, despite many years of fighting against totalitarianism, namely over 100 years of efforts, for the third time in history since the beginning of the twentieth century, the Iranian people started an uprising that soon transformed into a revolutionary movement. Unlike previous ones, maybe for the first time in history, women are the initiators and leaders of this heroic act. Different from the reactionary movement of 1979, this one is an innovative movement that has built over identity, human rights, and women's rights. This movement is unique because the most vulnerable groups of society become the most fearless warriors against the most orthodox and prejudiced groups with the patriarchal mindset that has ruled over us for centuries. Marx once said they "have nothing to lose but their chains. They have a world to win", and that is the wisdom of the motto, "Women, Life, and Liberty"!
 
----- 
+---
 
 #### References
 
