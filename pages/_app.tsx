@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <main className="py-14 mx-auto w10/12 lg:w-8/12">
-        <Component {...pageProps} />
+       ( <Component {...pageProps} />)
       </main>
       <Footer />
     </Auth0Provider>
