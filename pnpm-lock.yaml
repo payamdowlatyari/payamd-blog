@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.2.4
     version: 2.2.4(react-dom@18.2.0)(react@18.2.0)
   "@tailwindcss/typography":
-    specifier: ^0.5.11
-    version: 0.5.11(tailwindcss@3.4.1)
+    specifier: ^0.5.12
+    version: 0.5.12(tailwindcss@3.4.3)
   date-fns:
     specifier: ^2.30.0
     version: 2.30.0
@@ -34,7 +34,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-images:
     specifier: 1.2.0-beta.7
-    version: 1.2.0-beta.7(@types/react@18.2.72)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+    version: 1.2.0-beta.7(@types/react@18.2.73)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
   react-photo-gallery:
     specifier: ^8.0.0
     version: 8.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -53,14 +53,17 @@ dependencies:
   tw-elements-react:
     specifier: 1.0.0-alpha2
     version: 1.0.0-alpha2(@types/node@18.19.26)(typescript@4.9.5)
+  vfile:
+    specifier: ^6.0.1
+    version: 6.0.1
 
 devDependencies:
   "@types/node":
     specifier: ^18.19.26
     version: 18.19.26
   "@types/react":
-    specifier: ^18.2.72
-    version: 18.2.72
+    specifier: ^18.2.73
+    version: 18.2.73
   "@types/react-dom":
     specifier: ^18.2.22
     version: 18.2.22
@@ -74,8 +77,8 @@ devDependencies:
     specifier: 3.2.5
     version: 3.2.5
   tailwindcss:
-    specifier: ^3.4.1
-    version: 3.4.1
+    specifier: ^3.4.3
+    version: 3.4.3
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
@@ -407,10 +410,10 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@tailwindcss/typography@0.5.11(tailwindcss@3.4.1):
+  /@tailwindcss/typography@0.5.12(tailwindcss@3.4.3):
     resolution:
       {
-        integrity: sha512-ahOULqBQGCdSqL3vMNjH1R5cU2gxTh059fJIKF2enHXE8c/s3yKGDSKZ1+4poCr7BZRREJS8n5cCFmwsW4Ok3A==,
+        integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==,
       }
     peerDependencies:
       tailwindcss: ">=3.0.0 || insiders"
@@ -419,7 +422,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.1
+      tailwindcss: 3.4.3
     dev: false
 
   /@tsconfig/node10@1.0.11:
@@ -525,7 +528,7 @@ packages:
         integrity: sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==,
       }
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
     dev: true
 
   /@types/react-window@1.8.8:
@@ -534,13 +537,13 @@ packages:
         integrity: sha512-8Ls660bHR1AUA2kuRvVG9D/4XpRC6wjAaPT9dil7Ckc76eP9TKWZwwmgfq8Q1LANX3QNDnoU4Zp48A3w+zK69Q==,
       }
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
     dev: false
 
-  /@types/react@18.2.72:
+  /@types/react@18.2.73:
     resolution:
       {
-        integrity: sha512-/e7GWxGzXQF7OJAua7UAYqYi/4VpXEfbGtmYQcAQwP3SjjjAXfybTf/JK5S+SaetB/ChXl8Y2g1hCsj7jDXxcg==,
+        integrity: sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==,
       }
     dependencies:
       "@types/prop-types": 15.7.12
@@ -550,6 +553,13 @@ packages:
     resolution:
       {
         integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==,
+      }
+    dev: false
+
+  /@types/unist@3.0.2:
+    resolution:
+      {
+        integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==,
       }
     dev: false
 
@@ -741,7 +751,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001600
-      electron-to-chromium: 1.4.717
+      electron-to-chromium: 1.4.718
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1101,10 +1111,10 @@ packages:
         integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==,
       }
 
-  /electron-to-chromium@1.4.717:
+  /electron-to-chromium@1.4.718:
     resolution:
       {
-        integrity: sha512-6Fmg8QkkumNOwuZ/5mIbMU9WI3H2fmn5ajcVya64I5Yr5CcNmO7vcLt0Y7c96DCiMO5/9G+4sI2r6eEvdg1F7A==,
+        integrity: sha512-6FpOapKxHuRNUoNQEP54sAacMod/XX68/Oaau+UoTEC8yxy5lR8jAvTlyrb60oZ9OtuUuAEtKvCQOJm6S4MtBQ==,
       }
     dev: true
 
@@ -2604,7 +2614,7 @@ packages:
       }
     dev: false
 
-  /react-focus-lock@2.11.2(@types/react@18.2.72)(react@18.2.0):
+  /react-focus-lock@2.11.2(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-DDTbEiov0+RthESPVSTIdAWPPKic+op3sCcP+icbMRobvQNt7LuAlJ3KoarqQv5sCgKArru3kXmlmFTa27/CdQ==,
@@ -2617,16 +2627,16 @@ packages:
         optional: true
     dependencies:
       "@babel/runtime": 7.24.1
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       focus-lock: 1.3.4
       prop-types: 15.8.1
       react: 18.2.0
       react-clientside-effect: 1.2.6(react@18.2.0)
-      use-callback-ref: 1.3.2(@types/react@18.2.72)(react@18.2.0)
-      use-sidecar: 1.1.2(@types/react@18.2.72)(react@18.2.0)
+      use-callback-ref: 1.3.2(@types/react@18.2.73)(react@18.2.0)
+      use-sidecar: 1.1.2(@types/react@18.2.73)(react@18.2.0)
     dev: false
 
-  /react-focus-on@3.9.2(@types/react@18.2.72)(react@18.2.0):
+  /react-focus-on@3.9.2(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-3UZ9PjA+pe8ZK3B+rz7zcgJUIRJVzJEddYe6R5WVUAsSXW8awHw9nXJqK0UU5MenGEUh/tMUBWMqN633+d2eCA==,
@@ -2639,15 +2649,15 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       aria-hidden: 1.2.4
       react: 18.2.0
-      react-focus-lock: 2.11.2(@types/react@18.2.72)(react@18.2.0)
-      react-remove-scroll: 2.5.9(@types/react@18.2.72)(react@18.2.0)
-      react-style-singleton: 2.2.1(@types/react@18.2.72)(react@18.2.0)
+      react-focus-lock: 2.11.2(@types/react@18.2.73)(react@18.2.0)
+      react-remove-scroll: 2.5.9(@types/react@18.2.73)(react@18.2.0)
+      react-style-singleton: 2.2.1(@types/react@18.2.73)(react@18.2.0)
       tslib: 2.6.2
-      use-callback-ref: 1.3.2(@types/react@18.2.72)(react@18.2.0)
-      use-sidecar: 1.1.2(@types/react@18.2.72)(react@18.2.0)
+      use-callback-ref: 1.3.2(@types/react@18.2.73)(react@18.2.0)
+      use-sidecar: 1.1.2(@types/react@18.2.73)(react@18.2.0)
     dev: false
 
   /react-full-screen@1.1.1(react@18.2.0):
@@ -2663,7 +2673,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-images@1.2.0-beta.7(@types/react@18.2.72)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
+  /react-images@1.2.0-beta.7(@types/react@18.2.73)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
         integrity: sha512-/ewkPwkwJDqTmc0HMPccFPE5H4A6JVRCfMahBc2j9DTBPmdANSXAglTlYLgZC8Q7iZQjGFado3OxixSrog/02w==,
@@ -2681,7 +2691,7 @@ packages:
       raf-schd: 4.0.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-focus-on: 3.9.2(@types/react@18.2.72)(react@18.2.0)
+      react-focus-on: 3.9.2(@types/react@18.2.73)(react@18.2.0)
       react-full-screen: 1.1.1(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
       react-view-pager: 0.6.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
@@ -2756,7 +2766,7 @@ packages:
       }
     dev: false
 
-  /react-remove-scroll-bar@2.3.6(@types/react@18.2.72)(react@18.2.0):
+  /react-remove-scroll-bar@2.3.6(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-DtSYaao4mBmX+HDo5YWYdBWQwYIQQshUV/dVxFxK+KM26Wjwp1gZ6rv6OC3oujI6Bfu6Xyg3TwK533AQutsn/g==,
@@ -2769,13 +2779,13 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       react: 18.2.0
-      react-style-singleton: 2.2.1(@types/react@18.2.72)(react@18.2.0)
+      react-style-singleton: 2.2.1(@types/react@18.2.73)(react@18.2.0)
       tslib: 2.6.2
     dev: false
 
-  /react-remove-scroll@2.5.9(@types/react@18.2.72)(react@18.2.0):
+  /react-remove-scroll@2.5.9(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-bvHCLBrFfM2OgcrpPY2YW84sPdS2o2HKWJUf1xGyGLnSoEnOTOBpahIarjRuYtN0ryahCeP242yf+5TrBX/pZA==,
@@ -2788,13 +2798,13 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       react: 18.2.0
-      react-remove-scroll-bar: 2.3.6(@types/react@18.2.72)(react@18.2.0)
-      react-style-singleton: 2.2.1(@types/react@18.2.72)(react@18.2.0)
+      react-remove-scroll-bar: 2.3.6(@types/react@18.2.73)(react@18.2.0)
+      react-style-singleton: 2.2.1(@types/react@18.2.73)(react@18.2.0)
       tslib: 2.6.2
-      use-callback-ref: 1.3.2(@types/react@18.2.72)(react@18.2.0)
-      use-sidecar: 1.1.2(@types/react@18.2.72)(react@18.2.0)
+      use-callback-ref: 1.3.2(@types/react@18.2.73)(react@18.2.0)
+      use-sidecar: 1.1.2(@types/react@18.2.73)(react@18.2.0)
     dev: false
 
   /react-router-dom@6.22.3(react-dom@18.2.0)(react@18.2.0):
@@ -2826,7 +2836,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-style-singleton@2.2.1(@types/react@18.2.72)(react@18.2.0):
+  /react-style-singleton@2.2.1(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==,
@@ -2839,7 +2849,7 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       get-nonce: 1.0.1
       invariant: 2.2.4
       react: 18.2.0
@@ -3354,10 +3364,10 @@ packages:
       }
     dev: false
 
-  /tailwindcss@3.4.1:
+  /tailwindcss@3.4.3:
     resolution:
       {
-        integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==,
+        integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==,
       }
     engines: { node: ">=14.0.0" }
     hasBin: true
@@ -3566,6 +3576,15 @@ packages:
       "@types/unist": 2.0.10
     dev: false
 
+  /unist-util-stringify-position@4.0.0:
+    resolution:
+      {
+        integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==,
+      }
+    dependencies:
+      "@types/unist": 3.0.2
+    dev: false
+
   /unist-util-visit-parents@5.1.3:
     resolution:
       {
@@ -3601,7 +3620,7 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /use-callback-ref@1.3.2(@types/react@18.2.72)(react@18.2.0):
+  /use-callback-ref@1.3.2(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-elOQwe6Q8gqZgDA8mrh44qRTQqpIHDcZ3hXTLjBe1i4ph8XpNJnO+aQf3NaG+lriLopI4HMx9VjQLfPQ6vhnoA==,
@@ -3614,12 +3633,12 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       react: 18.2.0
       tslib: 2.6.2
     dev: false
 
-  /use-sidecar@1.1.2(@types/react@18.2.72)(react@18.2.0):
+  /use-sidecar@1.1.2(@types/react@18.2.73)(react@18.2.0):
     resolution:
       {
         integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==,
@@ -3632,7 +3651,7 @@ packages:
       "@types/react":
         optional: true
     dependencies:
-      "@types/react": 18.2.72
+      "@types/react": 18.2.73
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.6.2
@@ -3696,6 +3715,16 @@ packages:
       unist-util-stringify-position: 3.0.3
     dev: false
 
+  /vfile-message@4.0.2:
+    resolution:
+      {
+        integrity: sha512-jRDZ1IMLttGj41KcZvlrYAaI3CfqpLpfpf+Mfig13viT6NKvRzWZ+lXz0Y5D60w6uJIBAOGq9mSHf0gktF0duw==,
+      }
+    dependencies:
+      "@types/unist": 3.0.2
+      unist-util-stringify-position: 4.0.0
+    dev: false
+
   /vfile@5.3.7:
     resolution:
       {
@@ -3706,6 +3735,17 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
+    dev: false
+
+  /vfile@6.0.1:
+    resolution:
+      {
+        integrity: sha512-1bYqc7pt6NIADBJ98UiG0Bn/CHIVOoZ/IyEkqIruLg0mE1BKzkOXY2D6CSqQIcKqgadppE5lrxgWXJmXd7zZJw==,
+      }
+    dependencies:
+      "@types/unist": 3.0.2
+      unist-util-stringify-position: 4.0.0
+      vfile-message: 4.0.2
     dev: false
 
   /warning@4.0.3:

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -15,11 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
+  "baseUrl": ".",
   "include": [
     "next-env.d.ts",
     "remark-html.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*",
+    ".d.ts",
     "tailwind.config.js",
     "postcss.config.js"
   ],
