@@ -14,43 +14,48 @@ export default function NotePage({
       <Grid fluid>
         {allBooks.length ? (
           allBooks.map((book) => (
-            <Row className="p-3 m-2 bg-neutral-50 hover:bg-neutral-100 duration-500 rounded">
+            <Row className="m-2 bg-gray-100 hover:bg-gray-200 duration-500 rounded">
               <Link
                 as={`/books/${book.slug}`}
                 href="/books/[slug]"
                 className="text-base leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline font-sans"
               >
-                <article key={book.slug} className="mb-10">
-                  <Col lg={4} xs={24} className="p-1">
+                <article key={book.slug} className="mb-1">
+                  <Col lg={4} xs={24}>
                     <Image
                       src={book.img}
                       alt="book"
-                      className="rounded"
+                      className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                       width={120}
                       height={60}
                     />
                   </Col>
-                  <Col lg={20} xs={24}>
-                    {book.title}
-
-                    <p className="font-sans uppercase font-normal text-sm">
+                  <Col lg={20} xs={24} className="p-2">
+                    <div className="font-sans font-bold text-base">
+                      {book.title}
+                    </div>
+                    <div className="font-sans font-normal text-sm">
                       {book.author}
-                    </p>
-                    <p className="font-sans py-1 font-normal text-base">
+                    </div>
+                    <div className="font-sans py-2 font-normal text-sm">
                       {book.excerpt}
-                    </p>
+                    </div>
                     <div className="text-gray-400 font-normal text-sm">
                       <time>{distanceToNow(new Date(book.date))}</time>
                     </div>
-                    <p className="flex justify-end content-around">
+                    <div className="flex justify-end content-around">
                       <Whisper
                         placement="left"
                         controlId="control-id-hover"
                         trigger="hover"
                         speaker={<Tooltip>goodreads.com</Tooltip>}
                       >
-                        <Link href={book.goodreads} target="_blank">
+                        <Link
+                          href={book.goodreads}
+                          target="_blank"
+                          className="p-2"
+                        >
                           <Image
                             src="/Goodreads-Logo.webp"
                             alt="book"
@@ -60,7 +65,7 @@ export default function NotePage({
                           />
                         </Link>
                       </Whisper>
-                    </p>
+                    </div>
                   </Col>
                 </article>
               </Link>

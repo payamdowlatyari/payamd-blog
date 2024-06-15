@@ -14,42 +14,48 @@ export default function NotePage({
       <Grid fluid>
         {allPosts.length ? (
           allPosts.map((post) => (
-            <Row className="p-3 m-2 bg-neutral-50 hover:bg-neutral-100 duration-500 rounded">
+            <Row className="m-2 bg-gray-100 hover:bg-gray-200 duration-500 rounded">
               <Link
                 as={`/posts/${post.slug}`}
                 href="/posts/[slug]"
                 className="font-sans text-base leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline"
               >
-                <article key={post.slug} className="mb-10">
-                  <Col lg={8} xs={24} className="p-1">
+                <article key={post.slug}>
+                  <Col lg={8} xs={24}>
                     <Image
                       src={post.img}
                       alt="post"
-                      className="rounded"
-                      width={300}
-                      height={200}
+                      className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-80 md:rounded-none md:rounded-s-lg"
+                      width={400}
+                      height={400}
                     />
                   </Col>
-                  <Col lg={16} xs={24}>
-                    {post.title}
-                    <p className="font-sans uppercase font-normal text-sm">
+                  <Col lg={16} xs={24} className="p-2">
+                    <div className="font-sans font-bold text-base">
+                      {post.title}
+                    </div>
+                    <div className="font-sans font-normal text-sm">
                       {post.author}
-                    </p>
-                    <p className="font-sans py-1 font-normal text-base">
+                    </div>
+                    <div className="font-sans py-2 font-normal text-sm">
                       {post.excerpt}
-                    </p>
+                    </div>
                     <div className="text-gray-400 font-normal text-sm">
                       <time>{distanceToNow(new Date(post.date))}</time>
                     </div>
-                    <p className="flex justify-end content-around">
+                    <div className="flex justify-end content-around">
                       <Whisper
                         placement="left"
                         controlId="control-id-hover"
                         trigger="hover"
                         speaker={<Tooltip>medium.com</Tooltip>}
                       >
-                        <Link href={post.medium} target="_blank">
+                        <Link
+                          href={post.medium}
+                          target="_blank"
+                          className="p-1"
+                        >
                           <Image
                             src="/Medium_logo.svg.png"
                             alt="book"
@@ -59,7 +65,7 @@ export default function NotePage({
                           />
                         </Link>
                       </Whisper>
-                    </p>
+                    </div>
                   </Col>
                 </article>
               </Link>

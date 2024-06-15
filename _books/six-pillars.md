@@ -3,7 +3,7 @@ title: "Six Pillars of Self-Esteem"
 excerpt: "The Six Pillars of Self-Esteem is a psychology book written by Dr. Nathaniel Branden. Dr. Branden is known as the father of the Self-Esteem movement and this book is his most popular work."
 author: "Nathaniel Branden"
 img: "https://storage.googleapis.com/www.payamd.com/Portfolio/six_pillars.jpeg"
-goodreads: "https://www.goodreads.com/book/show/79352.Six_Pillars_of_Self_Esteem"
+goodreads: "https://www.goodreads.com/book/show/79352"
 date: "2021-03-01"
 ---
 
