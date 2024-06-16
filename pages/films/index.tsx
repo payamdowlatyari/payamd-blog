@@ -14,7 +14,7 @@ export default function NotePage({
       <Grid fluid>
         {allFilms.length ? (
           allFilms.map((film) => (
-            <Row className="m-2 bg-gray-100 hover:bg-gray-200 duration-500 rounded">
+            <Row className="m-2 bg-gray-50 hover:bg-gray-100 duration-500 rounded">
               <Link
                 as={`/films/${film.slug}`}
                 href="/films/[slug]"

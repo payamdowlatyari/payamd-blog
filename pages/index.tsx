@@ -48,23 +48,25 @@ function HomePage() {
               </div>
             </Col>
           </Row>
-          <Row>
-            <Col md={12} sm={24}>
-              <Link
-                className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
-                href="/posts"
+          <Row className="px-1">
+            <Link
+              className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
+              href="/posts"
+            >
+              <Panel
+                header="Posts"
+                className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-4"
               >
-                <Panel
-                  header={getTag("Posts")}
-                  className="bg-gray-100 hover:bg-gray-200 duration-500 my-1"
-                >
+                <Col md={12} sm={24}>
                   <Image
                     src="https://storage.googleapis.com/www.payamd.com/Portfolio/women-life-liberty.webp"
                     alt="wall"
                     className="rounded"
-                    width={320}
+                    width={240}
                     height={240}
                   />
+                </Col>
+                <Col md={12} sm={24}>
                   <h5 className="font-sans pt-2 text-base font-semibold">
                     Women, Life, Liberty
                   </h5>
@@ -72,17 +74,19 @@ function HomePage() {
                     In this article, I discussed an ongoing movement in Iran
                     along with a breif history of social movements since 1906.
                   </p>
-                </Panel>
-              </Link>
-            </Col>
+                </Col>
+              </Panel>
+            </Link>
+          </Row>
+          <Row>
             <Col md={12} sm={24}>
               <Link
                 className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
                 href="/books"
               >
                 <Panel
-                  header={getTag("Books")}
-                  className="bg-gray-100 hover:bg-gray-200 duration-500 my-1"
+                  header="Books"
+                  className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-2"
                 >
                   <h5 className="font-sans font-semibold text-base">
                     The Drama of the Gifted Child
@@ -95,13 +99,15 @@ function HomePage() {
                   </p>
                 </Panel>
               </Link>
+            </Col>
+            <Col md={12} sm={24}>
               <Link
                 className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
                 href="/films"
               >
                 <Panel
-                  header={getTag("Films")}
-                  className="bg-gray-100 hover:bg-gray-200 duration-500 my-1"
+                  header="Films"
+                  className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-2"
                 >
                   <h5 className="font-sans font-semibold text-base">
                     Fanny and Alexander
