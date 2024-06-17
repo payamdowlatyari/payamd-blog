@@ -11,7 +11,7 @@ export default function NotePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
-      <Grid fluid>
+      <Grid>
         {allBooks.length ? (
           allBooks.map((book) => (
             <Row className="m-2 bg-gray-50 hover:bg-gray-100 duration-500 rounded">
@@ -21,8 +21,8 @@ export default function NotePage({
                 className="text-base leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline font-sans"
               >
-                <article key={book.slug} className="mb-1">
-                  <Col lg={4} xs={24}>
+                <article key={book.slug} className="m-1">
+                  <Col lg={4} sm={12} xs={24}>
                     <Image
                       src={book.img}
                       alt="book"
@@ -31,7 +31,7 @@ export default function NotePage({
                       height={60}
                     />
                   </Col>
-                  <Col lg={20} xs={24} className="p-2">
+                  <Col lg={20} sm={12} xs={24} className="p-2">
                     <div className="font-sans font-bold text-base">
                       {book.title}
                     </div>

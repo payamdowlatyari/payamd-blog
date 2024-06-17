@@ -11,7 +11,7 @@ export default function NotePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
-      <Grid fluid>
+      <Grid>
         {allPosts.length ? (
           allPosts.map((post) => (
             <Row className="m-2 bg-gray-50 hover:bg-gray-100 duration-500 rounded">

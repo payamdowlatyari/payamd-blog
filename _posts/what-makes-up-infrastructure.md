@@ -2,7 +2,7 @@
 title: "What Makes Up Infrastructure"
 excerpt: "As technology has improved and the internet becomes part of our lives, the notion of infrastructure has been generalized to the world of information technology and, as a result, IT infrastructure was introduced."
 author: "Payam Dowlatyari"
-img: "https://storage.googleapis.com/www.payamd.com/Portfolio/infrastructure.webp"
+img: "https://storage.googleapis.com/www.payamd.com/Portfolio/infra1.jpeg"
 medium: "https://medium.com/@pdowlatyari/what-makes-up-infrastructure-57ec3599c822"
 date: "2020-08-23"
 ---
