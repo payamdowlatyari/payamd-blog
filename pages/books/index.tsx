@@ -14,61 +14,62 @@ export default function NotePage({
       <Grid>
         {allBooks.length ? (
           allBooks.map((book) => (
-            <Row className="m-2 bg-gray-50 hover:bg-gray-100 duration-500 rounded">
-              <Link
-                as={`/books/${book.slug}`}
-                href="/books/[slug]"
-                className="text-base leading-6 text-slate-600 font-bold hover:text-inherit 
+            <Row
+              className="m-2 bg-gray-50 rounded
+              text-base leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline font-sans"
-              >
-                <article key={book.slug} className="m-1">
-                  <Col lg={4} sm={12} xs={24}>
-                    <Image
-                      src={book.img}
-                      alt="book"
-                      className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                      width={120}
-                      height={60}
-                    />
-                  </Col>
-                  <Col lg={20} sm={12} xs={24} className="p-2">
-                    <div className="font-sans font-bold text-base">
-                      {book.title}
-                    </div>
-                    <div className="font-sans font-normal text-sm">
-                      {book.author}
-                    </div>
-                    <div className="font-sans py-2 font-normal text-sm">
-                      {book.excerpt}
-                    </div>
-                    <div className="text-gray-400 font-normal text-sm">
-                      <time>{distanceToNow(new Date(book.date))}</time>
-                    </div>
-                    <div className="flex justify-end content-around">
-                      <Whisper
-                        placement="left"
-                        controlId="control-id-hover"
-                        trigger="hover"
-                        speaker={<Tooltip>goodreads.com</Tooltip>}
+            >
+              <article key={book.slug} className="m-1">
+                <Col lg={4} sm={12} xs={24}>
+                  <Image
+                    src={book.img}
+                    alt="book"
+                    className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                    width={120}
+                    height={60}
+                  />
+                </Col>
+                <Col lg={20} sm={12} xs={24} className="p-2">
+                  <Link
+                    as={`/books/${book.slug}`}
+                    href="/books/[slug]"
+                    className="font-sans font-bold text-base"
+                  >
+                    {book.title}
+                  </Link>
+                  <div className="font-sans font-normal text-sm">
+                    {book.author}
+                  </div>
+                  <div className="font-sans py-2 font-normal text-sm">
+                    {book.excerpt}
+                  </div>
+                  <div className="text-gray-400 font-normal text-sm">
+                    <time>{distanceToNow(new Date(book.date))}</time>
+                  </div>
+                  <div className="flex justify-end content-around">
+                    <Whisper
+                      placement="left"
+                      controlId="control-id-hover"
+                      trigger="hover"
+                      speaker={<Tooltip>goodreads.com</Tooltip>}
+                    >
+                      <Link
+                        href={book.goodreads}
+                        target="_blank"
+                        className="p-2"
                       >
-                        <Link
-                          href={book.goodreads}
-                          target="_blank"
-                          className="p-2"
-                        >
-                          <Image
-                            src="/Goodreads-Logo.webp"
-                            alt="book"
-                            className="rounded inline-block"
-                            width={100}
-                            height={20}
-                          />
-                        </Link>
-                      </Whisper>
-                    </div>
-                  </Col>
-                </article>
-              </Link>
+                        <Image
+                          src="/Goodreads-Logo.webp"
+                          alt="book"
+                          className="rounded inline-block"
+                          width={100}
+                          height={20}
+                        />
+                      </Link>
+                    </Whisper>
+                  </div>
+                </Col>
+              </article>
             </Row>
           ))
         ) : (
