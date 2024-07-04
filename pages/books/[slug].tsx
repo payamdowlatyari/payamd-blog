@@ -8,7 +8,7 @@ import Container from "../../components/container";
 import distanceToNow from "../../lib/dateRelative";
 import { getAllBooks, getBookBySlug } from "../../lib/getBook";
 import markdownToHtml from "../../lib/markdownToHtml";
-import { Tooltip, Whisper } from "rsuite";
+import { Loader, Tooltip, Whisper } from "rsuite";
 import Head from "next/head";
 
 export default function BookPage({
@@ -27,7 +27,7 @@ export default function BookPage({
       </Head>
 
       {router.isFallback ? (
-        <div>Loading…</div>
+        <Loader content="Loading..." />
       ) : (
         <div>
           <article>

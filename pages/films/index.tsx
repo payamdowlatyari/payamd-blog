@@ -68,7 +68,6 @@ export default function NotePage({
                   </div>
                 </Col>
               </article>
-              {/* </div> */}
             </Row>
           ))
         ) : (

@@ -8,7 +8,7 @@ import Container from "../../components/container";
 import distanceToNow from "../../lib/dateRelative";
 import { getAllFilms, getFilmBySlug } from "../../lib/getFilm";
 import markdownToHtml from "../../lib/markdownToHtml";
-import { Tooltip, Whisper } from "rsuite";
+import { Loader, Tooltip, Whisper } from "rsuite";
 import Head from "next/head";
 
 export default function FilmPage({
@@ -27,7 +27,7 @@ export default function FilmPage({
       </Head>
 
       {router.isFallback ? (
-        <div>Loading…</div>
+        <Loader content="Loading..." />
       ) : (
         <div>
           <article>

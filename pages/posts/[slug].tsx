@@ -9,7 +9,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { Whisper, Tooltip } from "rsuite";
+import { Whisper, Tooltip, Loader } from "rsuite";
 
 export default function PostPage({
   post,
@@ -27,7 +27,7 @@ export default function PostPage({
       </Head>
 
       {router.isFallback ? (
-        <div>Loading…</div>
+        <Loader content="Loading..." />
       ) : (
         <div>
           <article>

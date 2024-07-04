@@ -15,10 +15,6 @@ export default function NotePage({
         {allPosts.length ? (
           allPosts.map((post) => (
             <Row
-              // className="m-2 bg-gray-50 hover:bg-gray-100 duration-500 rounded">
-              //   <Link
-              // as={`/posts/${post.slug}`}
-              // href="/posts/[slug]"
               className="font-sans text-base leading-6 text-slate-600 font-bold hover:text-inherit 
               hover:no-underline focus:text-inherit focus:no-underline bg-gray-50 m-2 rounded"
             >
@@ -69,7 +65,6 @@ export default function NotePage({
                   </div>
                 </Col>
               </article>
-              {/* </Link> */}
             </Row>
           ))
         ) : (

@@ -16,20 +16,20 @@ function HomePage({
     <>
       <Container>
         <Grid fluid>
-          <Row className="m-1 p-2 bg-neutral-800 rounded">
+          <Row className="m-1 rounded bg-neutral-50">
             <Col md={12} sm={24}>
               <div className="space-y-2 p-4">
-                <h4 className="font-sans text-lg font-semibold text-slate-50">
+                <h4 className="font-sans text-lg font-semibold">
                   My name is Payam Dowlatyari.{" "}
                 </h4>
 
-                <p className="font-sans text-md text-slate-50">
+                <p className="font-sans text-md">
                   I am a Software Engineer and UX Designer, graduated from UC
                   Irvine and work in the tech industry. I am a hobbyist
                   photographer and blogger interested in art, philosophy, and
                   social siences.
                 </p>
-                <p className="font-sans text-md text-slate-50">
+                <p className="font-sans text-md">
                   I like to bring my thoughts on paper, once in a while, on the
                   issues that matter to me. That will give me the possibility to
                   assess my philosophy and outlook in the future. I also
@@ -41,7 +41,7 @@ function HomePage({
               </div>
             </Col>
             <Col lg={12} xs={24}>
-              <div className="container max-w-3xl m-auto px-2 my-4">
+              <div className="container max-w-3xl m-auto my-1">
                 <Image
                   src="https://storage.googleapis.com/www.payamd.com/Portfolio/me-camera.jpeg"
                   alt="my photo"
@@ -52,80 +52,81 @@ function HomePage({
               </div>
             </Col>
           </Row>
-          <Row className="px-1">
-            <Link
-              className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
-              href="/posts"
-            >
-              <Panel className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-4 h-full">
-                <Col md={12} sm={24}>
-                  <Image
-                    src={latestPost.img}
-                    alt={latestPost.title}
-                    className="rounded"
-                    width={360}
-                    height={240}
-                  />
-                </Col>
-                <Col md={12} sm={24}>
-                  <h5 className="font-sans pt-2 text-base font-semibold">
-                    {latestPost.title}
-                  </h5>
-                  <p className="font-sans pb-2">{latestPost.excerpt}</p>
-                </Col>
-              </Panel>
-            </Link>
+          <Row className="px-2 m-1 bg-neutral-50">
+            <Panel className="my-1 py-4 h-full">
+              <Col md={12} sm={24}>
+                <Image
+                  src={latestPost.img}
+                  alt={latestPost.title}
+                  className="rounded"
+                  width={360}
+                  height={240}
+                />
+              </Col>
+              <Col md={12} sm={24}>
+                <Link
+                  href="/posts"
+                  className="font-sans pt-2 text-lg font-semibold"
+                >
+                  {latestPost.title}
+                </Link>
+                <p className="font-sans font-semibold text-base text-slate-500">
+                  {latestPost.author}
+                </p>
+                <p className="font-sans pb-2">{latestPost.excerpt}</p>
+              </Col>
+            </Panel>
           </Row>
           <Row>
-            <Col md={12} sm={24}>
-              <Link
-                className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
-                href="/books"
-              >
-                <Panel className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-1 min-h-full">
-                  <div className="container max-w-3xl m-auto px-2 my-4">
-                    <Image
-                      src={latestBook.img}
-                      alt={latestBook.title}
-                      className="rounded"
-                      width={180}
-                      height={200}
-                    />
-                  </div>
-                  <h5 className="font-sans font-semibold text-base">
+            <Col md={12} sm={24} className="h-full bg-neutral-50">
+              <Panel className="my-1 py-1">
+                <div className="container max-w-3xl m-auto px-2 my-4">
+                  <Image
+                    src={latestBook.img}
+                    alt={latestBook.title}
+                    className="rounded"
+                    width={180}
+                    height={200}
+                  />
+                </div>
+                <div className="min-h-52">
+                  <Link
+                    href="/books"
+                    className="font-sans font-semibold text-lg"
+                  >
                     {latestBook.title}
-                  </h5>
-                  <p className="font-sans text-base text-slate-700">
+                  </Link>
+                  <p className="font-sans font-semibold text-base text-slate-500">
                     {latestBook.author}
                   </p>
                   <p className="font-sans">{latestBook.excerpt}</p>
-                </Panel>
-              </Link>
+                </div>
+              </Panel>
             </Col>
-            <Col md={12} sm={24}>
-              <Link
-                className="text-inherit hover:text-inherit hover:no-underline focus:text-inherit focus:no-underline"
-                href="/films"
-              >
-                <Panel className="bg-gray-50 hover:bg-gray-100 duration-500 my-1 py-1">
-                  <div className="container max-w-3xl m-auto px-2 my-4">
-                    <Image
-                      src={latestFilm.img}
-                      alt={latestFilm.title}
-                      className="rounded"
-                      width={180}
-                      height={200}
-                    />
-                  </div>
-                  <h5 className="font-sans font-semibold text-base">
+            <Col md={12} sm={24} className="h-full bg-neutral-50">
+              <Panel className="my-1 py-1">
+                <div className="container max-w-3xl m-auto px-2 my-4">
+                  <Image
+                    src={latestFilm.img}
+                    alt={latestFilm.title}
+                    className="rounded"
+                    width={180}
+                    height={200}
+                  />
+                </div>
+                <div className="min-h-52">
+                  <Link
+                    href="/films"
+                    className="font-sans font-semibold text-lg"
+                  >
                     {latestFilm.title}
-                  </h5>
-                  <p className="font-sans text-base text-slate-700">
-                    {latestFilm.author}
+                  </Link>
+                  <p className="font-sans font-semibold text-base text-slate-500">
+                    {latestFilm.director}
                   </p>
                   <p className="font-sans">{latestFilm.excerpt}</p>
-                </Panel>
-              </Link>
+                </div>
+              </Panel>
             </Col>
           </Row>
         </Grid>
@@ -150,7 +151,7 @@ export async function getStaticProps() {
     "title",
     "excerpt",
     "date",
-    "author",
+    "director",
     "img",
   ]);
   const latestFilm = films[0];
