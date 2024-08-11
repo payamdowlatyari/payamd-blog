@@ -6,6 +6,7 @@ import { getAllBooks } from "../lib/getBook";
 import { InferGetStaticPropsType } from "next";
 import { getAllFilms } from "../lib/getFilm";
 import { getAllPosts } from "../lib/getPost";
+import distanceToNow from "../lib/dateRelative";
 
 function HomePage({
   latestBook,
@@ -16,7 +17,7 @@ function HomePage({
     <>
       <Container>
         <Grid fluid>
-          <Row className="my-2 p-6 rounded bg-white shadow-lg">
+          <Row className="my-2 p-6">
             <Col md={12} sm={24}>
               <div className="space-y-2 p-4">
                 <h4 className="font-sans text-lg font-semibold">
@@ -46,21 +47,21 @@ function HomePage({
                   src="https://storage.googleapis.com/www.payamd.com/Portfolio/me-camera.jpeg"
                   alt="my photo"
                   className="rounded"
-                  width={500}
-                  height={350}
+                  width={600}
+                  height={450}
                 />
               </div>
             </Col>
           </Row>
-          <Row className="px-2 my-2 bg-white shadow-lg">
+          <Row className="px-2 my-2">
             <Panel className="my-1 py-4 h-full">
               <Col md={12} sm={24}>
                 <Image
                   src={latestPost.img}
                   alt={latestPost.title}
                   className="rounded"
-                  width={360}
-                  height={240}
+                  width={400}
+                  height={400}
                 />
               </Col>
               <Col md={12} sm={24}>
@@ -74,10 +75,13 @@ function HomePage({
                   {latestPost.author}
                 </p>
                 <p className="font-sans pb-2">{latestPost.excerpt}</p>
+                <p className="font-sans text-slate-400">
+                  {distanceToNow(new Date(latestPost.date))}
+                </p>
               </Col>
             </Panel>
           </Row>
-          <Row className="px-2 my-2 bg-white shadow-lg">
+          <Row className="px-2 my-2">
             <Col md={12} sm={24} className="h-full">
               <Panel className="my-1 py-1">
                 <div className="container max-w-3xl m-auto px-2 my-4">
@@ -100,6 +104,9 @@ function HomePage({
                     {latestBook.author}
                   </p>
                   <p className="font-sans">{latestBook.excerpt}</p>
+                  <p className="font-sans text-slate-400">
+                    {distanceToNow(new Date(latestBook.date))}
+                  </p>
                 </div>
               </Panel>
             </Col>
@@ -125,6 +132,9 @@ function HomePage({
                     {latestFilm.director}
                   </p>
                   <p className="font-sans">{latestFilm.excerpt}</p>
+                  <p className="font-sans text-slate-400">
+                    {distanceToNow(new Date(latestFilm.date))}
+                  </p>
                 </div>
               </Panel>
             </Col>

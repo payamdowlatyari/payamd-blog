@@ -14,13 +14,13 @@ export default function NotePage({
       <Grid>
         {allFilms.length ? (
           allFilms.map((film) => (
-            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold m-2">
               <article key={film.slug} className="mb-1">
                 <Col lg={4} xs={24}>
                   <Image
                     src={film.img}
                     alt="film"
-                    className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                    className="object-cover w-full rounded h-96 md:h-auto md:w-48"
                     width={150}
                     height={75}
                   />

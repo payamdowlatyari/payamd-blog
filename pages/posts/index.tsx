@@ -14,13 +14,13 @@ export default function NotePage({
       <Grid>
         {allPosts.length ? (
           allPosts.map((post) => (
-            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold m-2">
               <article key={post.slug}>
                 <Col lg={8} xs={24}>
                   <Image
                     src={post.img}
                     alt="post"
-                    className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-80 md:rounded-none md:rounded-s-lg"
+                    className="object-cover w-full rounded h-96 md:h-auto md:w-80"
                     width={400}
                     height={400}
                   />

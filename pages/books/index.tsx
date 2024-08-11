@@ -14,13 +14,13 @@ export default function NotePage({
       <Grid>
         {allBooks.length ? (
           allBooks.map((book) => (
-            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold m-2">
               <article key={book.slug}>
                 <Col lg={4} sm={12} xs={24}>
                   <Image
                     src={book.img}
                     alt="book"
-                    className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                    className="object-cover w-full rounded h-96 md:h-auto md:w-48"
                     width={120}
                     height={60}
                   />
