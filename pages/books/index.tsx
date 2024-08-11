@@ -23,6 +23,7 @@ export default function NotePage({
                     className="object-cover w-full rounded h-96 md:h-auto md:w-48"
                     width={120}
                     height={60}
+                    loading="lazy"
                   />
                 </Col>
                 <Col lg={20} sm={12} xs={24} className="pt-1">

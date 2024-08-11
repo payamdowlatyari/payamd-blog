@@ -38,6 +38,7 @@ export default function PostPage({
                 className="object-cover w-full h-auto rounded"
                 width={1000}
                 height={1000}
+                loading="lazy"
               />
               <h1 className="text-3xl mt-5 font-bold font-sans">
                 {post.title}

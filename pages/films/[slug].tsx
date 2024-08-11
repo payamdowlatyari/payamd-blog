@@ -38,6 +38,7 @@ export default function FilmPage({
                 className="object-cover h-auto rounded"
                 width={200}
                 height={200}
+                loading="lazy"
               />
               <h1 className="mt-5 text-3xl font-bold font-sans">
                 {film.title}

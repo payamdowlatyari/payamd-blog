@@ -49,6 +49,7 @@ function HomePage({
                   className="rounded"
                   width={600}
                   height={450}
+                  loading="lazy"
                 />
               </div>
             </Col>
@@ -62,6 +63,7 @@ function HomePage({
                   className="rounded"
                   width={400}
                   height={400}
+                  loading="lazy"
                 />
               </Col>
               <Col md={12} sm={24}>
@@ -91,6 +93,7 @@ function HomePage({
                     className="rounded"
                     width={180}
                     height={200}
+                    loading="lazy"
                   />
                 </div>
                 <div className="min-h-52">
@@ -119,6 +122,7 @@ function HomePage({
                     className="rounded"
                     width={180}
                     height={200}
+                    loading="lazy"
                   />
                 </div>
                 <div className="min-h-52">
