@@ -32,7 +32,16 @@ export default function BookPage({
         <div>
           <article>
             <header>
-              <h1 className="text-3xl font-bold font-sans">{book.title}</h1>
+              <Image
+                src={book.img}
+                alt="post"
+                className="object-cover h-auto rounded"
+                width={200}
+                height={200}
+              />
+              <h1 className="mt-5 text-3xl font-bold font-sans">
+                {book.title}
+              </h1>
               {book.excerpt ? (
                 <p className="mt-2 text-lg font-sans">{book.excerpt}</p>
               ) : null}
@@ -87,6 +96,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "author",
     "goodreads",
+    "img",
   ]);
   const content = await markdownToHtml(book.content || "");
 

@@ -16,7 +16,7 @@ function HomePage({
     <>
       <Container>
         <Grid fluid>
-          <Row className="m-1 rounded bg-neutral-50">
+          <Row className="my-2 p-6 rounded bg-white shadow-lg">
             <Col md={12} sm={24}>
               <div className="space-y-2 p-4">
                 <h4 className="font-sans text-lg font-semibold">
@@ -52,7 +52,7 @@ function HomePage({
               </div>
             </Col>
           </Row>
-          <Row className="px-2 m-1 bg-neutral-50">
+          <Row className="px-2 my-2 bg-white shadow-lg">
             <Panel className="my-1 py-4 h-full">
               <Col md={12} sm={24}>
                 <Image
@@ -77,8 +77,8 @@ function HomePage({
               </Col>
             </Panel>
           </Row>
-          <Row>
-            <Col md={12} sm={24} className="h-full bg-neutral-50">
+          <Row className="px-2 my-2 bg-white shadow-lg">
+            <Col md={12} sm={24} className="h-full">
               <Panel className="my-1 py-1">
                 <div className="container max-w-3xl m-auto px-2 my-4">
                   <Image
@@ -103,7 +103,7 @@ function HomePage({
                 </div>
               </Panel>
             </Col>
-            <Col md={12} sm={24} className="h-full bg-neutral-50">
+            <Col md={12} sm={24} className="h-full">
               <Panel className="my-1 py-1">
                 <div className="container max-w-3xl m-auto px-2 my-4">
                   <Image

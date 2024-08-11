@@ -14,10 +14,7 @@ export default function NotePage({
       <Grid>
         {allFilms.length ? (
           allFilms.map((film) => (
-            <Row
-              className="text-base leading-6 bg-gray-50 m-2 text-slate-600 font-bold hover:text-inherit 
-              hover:no-underline focus:text-inherit focus:no-underline font-sans rounded"
-            >
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
               <article key={film.slug} className="mb-1">
                 <Col lg={4} xs={24}>
                   <Image
@@ -32,7 +29,7 @@ export default function NotePage({
                   <Link
                     as={`/films/${film.slug}`}
                     href="/films/[slug]"
-                    className="font-sans font-bold text-base"
+                    className="font-sans font-bold text-base hover:no-underline"
                   >
                     {film.title}
                   </Link>

@@ -14,10 +14,7 @@ export default function NotePage({
       <Grid>
         {allPosts.length ? (
           allPosts.map((post) => (
-            <Row
-              className="font-sans text-base leading-6 text-slate-600 font-bold hover:text-inherit 
-              hover:no-underline focus:text-inherit focus:no-underline bg-gray-50 m-2 rounded"
-            >
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
               <article key={post.slug}>
                 <Col lg={8} xs={24}>
                   <Image
@@ -28,11 +25,11 @@ export default function NotePage({
                     height={400}
                   />
                 </Col>
-                <Col lg={16} xs={24} className="p-2">
+                <Col lg={16} xs={24} className="pt-1">
                   <Link
                     as={`/posts/${post.slug}`}
                     href="/posts/[slug]"
-                    className="font-sans font-bold text-base"
+                    className="font-sans font-bold text-base hover:no-underline"
                   >
                     {post.title}
                   </Link>

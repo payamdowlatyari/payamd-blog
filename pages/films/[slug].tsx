@@ -32,7 +32,16 @@ export default function FilmPage({
         <div>
           <article>
             <header>
-              <h1 className="text-3xl font-bold font-sans">{film.title}</h1>
+              <Image
+                src={film.img}
+                alt="post"
+                className="object-cover h-auto rounded"
+                width={200}
+                height={200}
+              />
+              <h1 className="mt-5 text-3xl font-bold font-sans">
+                {film.title}
+              </h1>
               {film.excerpt ? (
                 <p className="mt-2 text-lg font-sans">{film.excerpt}</p>
               ) : null}
@@ -53,8 +62,8 @@ export default function FilmPage({
                     src="/IMDB_Logo_2016.svg.png"
                     alt="film"
                     className="rounded inline-block"
-                    width={40}
-                    height={20}
+                    width={50}
+                    height={25}
                   />
                   <span className="p-1 font-semibold text-slate-800">
                     {film.rate}
@@ -91,6 +100,7 @@ export async function getStaticProps({ params }: Params) {
     "director",
     "imdb",
     "rate",
+    "img",
   ]);
   const content = await markdownToHtml(film.content || "");
 

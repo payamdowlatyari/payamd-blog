@@ -14,12 +14,8 @@ export default function NotePage({
       <Grid>
         {allBooks.length ? (
           allBooks.map((book) => (
-            <Row
-              className="m-2 bg-gray-50 rounded
-              text-base leading-6 text-slate-600 font-bold hover:text-inherit 
-              hover:no-underline focus:text-inherit focus:no-underline font-sans"
-            >
-              <article key={book.slug} className="m-1">
+            <Row className="font-sans text-base leading-6 text-slate-600 font-bold shadow-md bg-white m-2 my-4 rounded hover:shadow-lg duration-300">
+              <article key={book.slug}>
                 <Col lg={4} sm={12} xs={24}>
                   <Image
                     src={book.img}
@@ -29,11 +25,11 @@ export default function NotePage({
                     height={60}
                   />
                 </Col>
-                <Col lg={20} sm={12} xs={24} className="p-2">
+                <Col lg={20} sm={12} xs={24} className="pt-1">
                   <Link
                     as={`/books/${book.slug}`}
                     href="/books/[slug]"
-                    className="font-sans font-bold text-base"
+                    className="font-sans font-bold text-base hover:no-underline"
                   >
                     {book.title}
                   </Link>

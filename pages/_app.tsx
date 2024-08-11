@@ -5,8 +5,10 @@ import Head from "next/head";
 import Header from "../components/header";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Footer from "../components/footer";
+import { useState } from "react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const [activeKey, setActiveKey] = useState(null);
   return (
     <Auth0Provider
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
@@ -20,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
         <title>My Web Blog</title>
       </Head>
-      <Header />
+      <Header onSelect={setActiveKey} activeKey={activeKey} />
       <main className="py-14 mx-auto w10/12 lg:w-8/12">
         <Component {...pageProps} />
       </main>

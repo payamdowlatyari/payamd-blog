@@ -32,7 +32,16 @@ export default function PostPage({
         <div>
           <article>
             <header>
-              <h1 className="text-3xl font-bold font-sans">{post.title}</h1>
+              <Image
+                src={post.img}
+                alt="post"
+                className="object-cover w-full h-auto rounded"
+                width={1000}
+                height={1000}
+              />
+              <h1 className="text-3xl mt-5 font-bold font-sans">
+                {post.title}
+              </h1>
               {post.excerpt ? (
                 <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
               ) : null}
@@ -87,6 +96,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "author",
     "medium",
+    "img",
   ]);
   const content = await markdownToHtml(post.content || "");
 

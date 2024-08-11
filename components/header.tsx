@@ -1,33 +1,26 @@
 import Container from "../components/container";
 import { Nav } from "rsuite";
 
-export default function Header() {
+export interface HeaderProps {
+  activeKey: string;
+  onSelect: (key: string) => void;
+  [key: string]: any;
+}
+export default function Header({ onSelect, activeKey, ...props }) {
   return (
-    <header className="py-6">
+    <header className="py-6 bg-slate-50">
       <Container>
-        <Nav appearance="subtle">
-          <Nav.Item
-            className="font-sans font-semibold text-slate-600 uppercase hover:no-underline hover:text-slate-900 focus:no-underline focus:text-slate-900 hover:duration-500"
-            href="/"
-          >
+        <Nav {...props} activeKey={activeKey} onSelect={onSelect}>
+          <Nav.Item href="/" eventKey="home">
             Home
           </Nav.Item>
-          <Nav.Item
-            className="font-sans font-semibold text-slate-600 uppercase hover:no-underline hover:text-slate-900 focus:no-underline focus:text-slate-900 hover:duration-500"
-            href="/posts"
-          >
+          <Nav.Item href="/posts" eventKey="posts">
             Posts
           </Nav.Item>
-          <Nav.Item
-            className="font-sans font-semibold text-slate-600 uppercase hover:no-underline hover:text-slate-900 focus:no-underline focus:text-slate-900 hover:duration-500"
-            href="/books"
-          >
+          <Nav.Item href="/books" eventKey="books">
             Books
           </Nav.Item>
-          <Nav.Item
-            className="font-sans font-semibold text-slate-600 uppercase hover:no-underline hover:text-slate-900 focus:no-underline focus:text-slate-900 hover:duration-500"
-            href="/films"
-          >
+          <Nav.Item href="/films" eventKey="films">
             Films
           </Nav.Item>
         </Nav>
