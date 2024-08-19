@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>My Web Blog</title>
       </Head>
       <Header onSelect={setActiveKey} activeKey={activeKey} />
-      <main className="py-14 mx-auto w10/12 lg:w-8/12">
+      <main className="py-5 mx-auto w-full max-w-6xl">
         <Component {...pageProps} />
       </main>
       <Footer />

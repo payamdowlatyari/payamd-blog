@@ -25,12 +25,12 @@ Properly speaking, as studies show, technological changes can impact our lives. 
 
 ---
 
-#### References
+### References
 
-_Hesketh, B., & Graco, W. (2015). Technological Change and the Sociotechnical System, Applied Psychology of. International Encyclopedia of the Social & Behavioral Sciences, 104–108._
+- _Hesketh, B., & Graco, W. (2015). Technological Change and the Sociotechnical System, Applied Psychology of. International Encyclopedia of the Social & Behavioral Sciences, 104–108._
 
-_Kline, R. (2015). Technological Determinism. International Encyclopedia of the Social & Behavioral Sciences, 109–112._
+- _Kline, R. (2015). Technological Determinism. International Encyclopedia of the Social & Behavioral Sciences, 109–112._
 
-_Kling, R. (1999). What is social informatics and why does it matter? D-Lib Magazine, 5(1). Retrieved from [dlib.org](http://www.dlib.org/dlib/january99/kling/01kling.html)_
+- _Kling, R. (1999). What is social informatics and why does it matter? D-Lib Magazine, 5(1). Retrieved from [dlib.org](http://www.dlib.org/dlib/january99/kling/01kling.html)_
 
-_Marche, S. (2012, May). Is Facebook Making Us Lonely? The Atlantic. Retrieved from [theatlantic.com](https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-makinguslonely/308930/)_
+- _Marche, S. (2012, May). Is Facebook Making Us Lonely? The Atlantic. Retrieved from [theatlantic.com](https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-makinguslonely/308930/)_

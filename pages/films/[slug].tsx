@@ -31,25 +31,25 @@ export default function FilmPage({
       ) : (
         <div>
           <article>
-            <header>
+            <header className="flex flex-wrap">
               <Image
                 src={film.img}
                 alt="post"
-                className="object-cover h-auto rounded"
+                className="object-cover h-auto rounded mr-5"
                 width={200}
                 height={200}
                 loading="lazy"
               />
-              <h1 className="mt-5 text-3xl font-bold font-sans">
-                {film.title}
-              </h1>
-              {film.excerpt ? (
-                <p className="mt-2 text-lg font-sans">{film.excerpt}</p>
-              ) : null}
-              <p className="font-sans uppercase"> {film.director}</p>
-              <time className="flex mt-2 text-gray-400">
-                {distanceToNow(new Date(film.date))}
-              </time>
+              <div className="flex flex-col mt-5 max-w-xl">
+                <h1 className="text-3xl font-bold font-sans">{film.title}</h1>
+                {film.excerpt ? (
+                  <p className="mt-2 text-lg font-sans">{film.excerpt}</p>
+                ) : null}
+                <p className="font-sans uppercase"> {film.director}</p>
+                <time className="flex mt-2 text-gray-400">
+                  {distanceToNow(new Date(film.date))}
+                </time>
+              </div>
             </header>
             <p className="flex justify-end content-around">
               <Whisper

@@ -31,20 +31,20 @@ With the collapse of the monarchy, many further pillars of society collapsed. Ir
 
 ---
 
-#### References
+### References
 
-_Amanat, A. (2017). Iran: A Modern History. United Kingdom: Yale University Press._
+- _Amanat, A. (2017). Iran: A Modern History. United Kingdom: Yale University Press._
 
-_DeFronzo, J., Gill, J. (2019). Social Problems and Social Movements._
+- _DeFronzo, J., Gill, J. (2019). Social Problems and Social Movements._
 
-_Deutsche Welle. (2022, October 22). Iran rights protest in Berlin draws thousands._
+- _Deutsche Welle. (2022, October 22). Iran rights protest in Berlin draws thousands._
 
-_Le Bon, Gustave. (1913). The Psychology of Revolution. Batoche Books._
+- _Le Bon, Gustave. (1913). The Psychology of Revolution. Batoche Books._
 
-_Maslow, A.H. (1943). A Theory of Human Motivation. In Psychological Review 430-437._
+- _Maslow, A.H. (1943). A Theory of Human Motivation. In Psychological Review 430-437._
 
-_Melucci, Alberto 1988: Getting Involved: Identity and Mobilization in Social Movements._
+- _Melucci, Alberto 1988: Getting Involved: Identity and Mobilization in Social Movements._
 
-_Milani, A. (2011). The Shah. United States: St. Martin's Publishing Group._
+- _Milani, A. (2011). The Shah. United States: St. Martin's Publishing Group._
 
-_Vroom, V.H. (1964). Work and motivation. Wiley._
+- _Vroom, V.H. (1964). Work and motivation. Wiley._

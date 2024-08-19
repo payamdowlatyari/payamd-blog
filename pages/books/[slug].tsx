@@ -31,25 +31,25 @@ export default function BookPage({
       ) : (
         <div>
           <article>
-            <header>
+            <header className="flex flex-wrap">
               <Image
                 src={book.img}
                 alt="post"
-                className="object-cover h-auto rounded"
+                className="object-cover h-auto rounded mr-5"
                 width={200}
                 height={200}
                 loading="lazy"
               />
-              <h1 className="mt-5 text-3xl font-bold font-sans">
-                {book.title}
-              </h1>
-              {book.excerpt ? (
-                <p className="mt-2 text-lg font-sans">{book.excerpt}</p>
-              ) : null}
-              <p className="font-sans uppercase"> {book.author}</p>
-              <time className="flex mt-2 text-gray-400">
-                {distanceToNow(new Date(book.date))}
-              </time>
+              <div className="flex flex-col mt-5 max-w-xl">
+                <h1 className="text-3xl font-bold font-sans">{book.title}</h1>
+                {book.excerpt ? (
+                  <p className="mt-2 text-lg font-sans">{book.excerpt}</p>
+                ) : null}
+                <p className="font-sans uppercase"> {book.author}</p>
+                <time className="flex mt-2 text-gray-400">
+                  {distanceToNow(new Date(book.date))}
+                </time>
+              </div>
             </header>
             <p className="flex justify-end content-around">
               <Whisper

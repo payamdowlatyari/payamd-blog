@@ -29,14 +29,14 @@ Considering the facts mentioned above, one can have a bit of an understanding of
 
 ---
 
-#### References
+### References
 
-_How Google Search Works | Our Mission. (n.d.). Retrieved November 14, 2019, from [Google](https://www.google.com/search/howsearchworks/mission/)_
+- _How Google Search Works | Our Mission. (n.d.). Retrieved November 14, 2019, from [Google](https://www.google.com/search/howsearchworks/mission/)_
 
-_Goldman, E. (2008). Search engine bias and the demise of search engine utopianism. In Web Search (pp. 121–133). Springer, Berlin, Heidelberg._
+- _Goldman, E. (2008). Search engine bias and the demise of search engine utopianism. In Web Search (pp. 121–133). Springer, Berlin, Heidelberg._
 
-_Alexa.com. (2019). Alexa — Top sites. [online] Available at: [Alexa](https://www.alexa.com/topsites) [Accessed 14 Nov. 2019]._
+- _Alexa.com. (2019). Alexa — Top sites. [online] Available at: [Alexa](https://www.alexa.com/topsites) [Accessed 14 Nov. 2019]._
 
-_Star, S., & Bowker, G. (2006). How to infrastructure. In L. Lievrouw & S. Livingstone (Eds.), Handbook of New Media: Social Shaping and Social Consequences of ICTs (Updated Student Edition, pp. 230–245). London, UK: Sage._
+- _Star, S., & Bowker, G. (2006). How to infrastructure. In L. Lievrouw & S. Livingstone (Eds.), Handbook of New Media: Social Shaping and Social Consequences of ICTs (Updated Student Edition, pp. 230–245). London, UK: Sage._
 
-_Speretta, M., & Gauch, S. (2005, September). Personalized search based on user search histories. In Proceedings of the 2005 IEEE/WIC/ACM international conference on web intelligence (pp. 622–628). IEEE Computer Society._
+- _Speretta, M., & Gauch, S. (2005, September). Personalized search based on user search histories. In Proceedings of the 2005 IEEE/WIC/ACM international conference on web intelligence (pp. 622–628). IEEE Computer Society._

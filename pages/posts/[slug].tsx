@@ -31,25 +31,26 @@ export default function PostPage({
       ) : (
         <div>
           <article>
-            <header>
+            <header className="flex flex-wrap">
               <Image
                 src={post.img}
                 alt="post"
-                className="object-cover w-full h-auto rounded"
-                width={1000}
-                height={1000}
+                className="object-cover h-auto rounded mr-5"
+                width={400}
+                height={400}
                 loading="lazy"
               />
-              <h1 className="text-3xl mt-5 font-bold font-sans">
-                {post.title}
-              </h1>
-              {post.excerpt ? (
-                <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
-              ) : null}
-              <p className="font-sans uppercase"> {post.author}</p>
-              <time className="flex mt-2 text-gray-400">
-                {distanceToNow(new Date(post.date))}
-              </time>
+
+              <div className="flex flex-col mt-5 max-w-3xl">
+                <h1 className="text-3xl font-bold font-sans">{post.title}</h1>
+                {post.excerpt ? (
+                  <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
+                ) : null}
+                <p className="font-sans uppercase"> {post.author}</p>
+                <time className="flex mt-2 text-gray-400">
+                  {distanceToNow(new Date(post.date))}
+                </time>
+              </div>
             </header>
             <p className="flex justify-end content-around">
               <Whisper

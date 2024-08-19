@@ -1,5 +1,4 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { Button } from "rsuite";
 
 type CommentFormProps = {
   text: string;
@@ -32,29 +31,29 @@ export default function CommentForm({
       <div className="flex items-center mt-4">
         {isAuthenticated ? (
           <div className="flex items-center space-x-6">
-            <Button appearance="subtle" color="green" className="py-2 px-4">
+            <button
+              className="bg-teal-500 hover:bg-teal-700 active:bg-teal-800 px-4 py-2 w-36 rounded-md text-white transition-colors duration-300"
+              type="submit"
+              disabled={!text}
+            >
               Send
-            </Button>
-            <Button
-              appearance="subtle"
-              color="blue"
-              className="py-2 px-4"
+            </button>
+            <button
+              className="text-gray-900 px-4 py-2 w-36 rounded-md hover:bg-gray-100 transition-colors duration-300"
               onClick={() =>
                 logout({ logoutParams: { returnTo: window.location.origin } })
               }
             >
               Log Out
-            </Button>
+            </button>
           </div>
         ) : (
-          <Button
-            appearance="subtle"
-            color="blue"
-            className="py-2 px-4"
+          <button
+            className="text-gray-900 px-4 py-2 w-36 rounded-md hover:bg-gray-100 transition-colors duration-300"
             onClick={() => loginWithPopup()}
           >
             Log In
-          </Button>
+          </button>
         )}
       </div>
     </form>
