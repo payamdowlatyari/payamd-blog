@@ -13,72 +13,74 @@ export default function NotePage({
     <>
       <h1 className="text-3xl font-bold font-sans mb-10 ml-5">Books</h1>
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {allBooks.length ? (
             allBooks.map((book) => (
-              <div className="font-sans text-base leading-6 font-bold m-2 max-w-sm border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
-                <article key={book.slug} className="flex flex-row flex-wrap">
-                  <div className="w-full">
-                    <Image
-                      src={book.img}
-                      alt="book"
-                      className="object-cover w-full rounded md:h-60"
-                      width={100}
-                      height={60}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="my-1 px-2 max-w-sm">
+              <article
+                key={book.slug}
+                className="flex flex-row items-center font-sans leading-6  border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
+              >
+                <div className="w-auto min-w-40 max-w-xs">
+                  <Image
+                    src={book.img}
+                    alt="book"
+                    className="object-cover w-full rounded md:h-60"
+                    width={100}
+                    height={60}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="m-1 px-2 max-w-sm">
+                  <Link
+                    as={`/books/${book.slug}`}
+                    href="/books/[slug]"
+                    className="font-sans font-bold text-lg my-2 hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                  >
+                    {book.title}
+                  </Link>
+                  <p className="mb-4 text-base font-semibold text-neutral-600">
+                    {book.author}
+                  </p>
+                  <p className="mb-2 text-sm text-neutral-800">
+                    {book.excerpt && book.excerpt.length > 150
+                      ? book.excerpt.substring(0, 150) + "..."
+                      : book.excerpt}
+
                     <Link
-                      as={`/books/${book.slug}`}
                       href="/books/[slug]"
-                      className="font-sans font-bold text-lg my-2 hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                      as={`/books/${book.slug}`}
+                      className="font-sans font-semibold hover:no-underline hover:text-gray-600 transition-colors duration-300"
                     >
-                      {book.title}
+                      Read more
                     </Link>
-                    <div className="font-sans font-semibold text-gray-600">
-                      {book.author}
-                    </div>
-                    <div className="font-sans py-2 font-normal text-sm">
-                      {book.excerpt.length > 200
-                        ? book.excerpt.substring(0, 200) + "..."
-                        : book.excerpt}{" "}
+                  </p>
+                  <p className=" text-neutral-500">
+                    <time>{distanceToNow(new Date(book.date))}</time>
+                  </p>
+                  <div className="flex justify-end content-around">
+                    <Whisper
+                      placement="left"
+                      controlId="control-id-hover"
+                      trigger="hover"
+                      speaker={<Tooltip>goodreads.com</Tooltip>}
+                    >
                       <Link
-                        as={`/books/${book.slug}`}
-                        href="/books/[slug]"
-                        className="font-sans font-semibold text-sm hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                        href={book.goodreads}
+                        target="_blank"
+                        className="p-2"
                       >
-                        Read more
+                        <Image
+                          src="/Goodreads-Logo.webp"
+                          alt="book"
+                          className="rounded inline-block"
+                          width={100}
+                          height={20}
+                        />
                       </Link>
-                    </div>
-                    <div className="text-gray-500 font-normal text-sm">
-                      <time>{distanceToNow(new Date(book.date))}</time>
-                    </div>
-                    <div className="flex justify-end content-around">
-                      <Whisper
-                        placement="left"
-                        controlId="control-id-hover"
-                        trigger="hover"
-                        speaker={<Tooltip>goodreads.com</Tooltip>}
-                      >
-                        <Link
-                          href={book.goodreads}
-                          target="_blank"
-                          className="p-2"
-                        >
-                          <Image
-                            src="/Goodreads-Logo.webp"
-                            alt="book"
-                            className="rounded inline-block"
-                            width={100}
-                            height={20}
-                          />
-                        </Link>
-                      </Whisper>
-                    </div>
+                    </Whisper>
                   </div>
-                </article>
-              </div>
+                </div>
+              </article>
             ))
           ) : (
             <p>No blog booked yet :/</p>

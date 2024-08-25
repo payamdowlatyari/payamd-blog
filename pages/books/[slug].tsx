@@ -69,10 +69,14 @@ export default function BookPage({
                 </Link>
               </Whisper>
             </p>
-            <div
-              className="text-base mt-10 mb-4 font-sans"
-              dangerouslySetInnerHTML={{ __html: book.content }}
-            />
+
+            <div className="bg-gray-100 rounded mt-5 p-5">
+              <h3 className="my-4 text-xl font-sans">My Review:</h3>
+              <div
+                className="text-base mt-4 mb-4 font-sans"
+                dangerouslySetInnerHTML={{ __html: book.content }}
+              />
+            </div>
           </article>
 
           <Comment />

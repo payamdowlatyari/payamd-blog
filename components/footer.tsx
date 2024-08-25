@@ -16,6 +16,14 @@ export default function Footer() {
           </li>
           <li>
             <Link
+              href="/about"
+              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/posts"
               className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
             >
@@ -41,7 +49,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className="flex justify-between w-full px-4 border-t border-gray-300">
+      <div className="flex justify-between w-full px-4 pt-2 border-t border-gray-300">
         <div className="sm:flex sm:items-center sm:justify-center pt-2">
           <span className="text-sm text-gray-500 sm:text-center">
             © {new Date().getFullYear()}{" "}

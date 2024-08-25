@@ -14,39 +14,6 @@ function HomePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
-      <div className="flex flex-wrap-reverse justify-center items-center my-4">
-        <div className="space-y-2 max-w-xl p-4">
-          <h1 className="font-sans text-3xl font-bold">Welcome to My Blog!</h1>
-          <h4 className="font-sans text-lg font-semibold">
-            My name is Payam Dowlatyari.{" "}
-          </h4>
-
-          <p className="font-sans text-md">
-            I am a Software Engineer and UX Designer, graduated from UC Irvine
-            and work in the tech industry. I am a hobbyist photographer and
-            blogger interested in art, philosophy, and social siences.
-          </p>
-          <p className="font-sans text-md">
-            I like to bring my thoughts on paper, once in a while, on the issues
-            that matter to me. That will give me the possibility to assess my
-            philosophy and outlook in the future. I also introduce books and
-            films I've found impressive and write a brief review sharing my
-            insights. I provided a comment section for readers who would like to
-            share their views with me and others.
-          </p>
-        </div>
-
-        <div className="max-w-md">
-          <Image
-            src="/me-hat.jpeg"
-            alt="my photo"
-            className="rounded"
-            width={300}
-            height={300}
-            loading="lazy"
-          />
-        </div>
-      </div>
       <div className="flex flex-wrap justify-center items-center my-8">
         <div className="group flex flex-wrap max-w-md overflow-hidden rounded-lg border bg-gray-100 select-none hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
           <div className="w-full">
@@ -69,7 +36,7 @@ function HomePage({
             <p className="font-sans font-semibold text-gray-600">
               {latestPost.author}
             </p>
-            <p className="font-sans leading-4 py-2">{latestPost.excerpt}</p>
+            <p className="font-sans py-2">{latestPost.excerpt}</p>
             <p className="font-sans text-gray-400">
               {distanceToNow(new Date(latestPost.date))}
             </p>
@@ -117,7 +84,7 @@ function HomePage({
               <p className="font-sans font-semibold text-gray-600">
                 {latestBook.author}
               </p>
-              <p className="font-sans leading-4 py-2">
+              <p className="font-sans py-2">
                 {latestBook.excerpt.length > 150
                   ? latestBook.excerpt.slice(0, 150) + "..."
                   : latestBook.excerpt}
@@ -169,12 +136,12 @@ function HomePage({
               <p className="font-sans font-semibold text-gray-600">
                 {latestFilm.director}
               </p>
-              <p className="font-sans leading-4 py-2">
+              <p className="font-sans py-2">
                 {latestFilm.excerpt.length > 200
                   ? latestFilm.excerpt.slice(0, 200) + "..."
                   : latestFilm.excerpt}
               </p>
-              <p className="font-sans font-light text-gray-500">
+              <p className="font-sans font-light text-gray-600">
                 {distanceToNow(new Date(latestFilm.date))}
               </p>
               <div className="opacity-0 -translate-x-2 flex-shrink-0 group-hover:translate-x-0 py-1 px-2.5 text-[0.6rem] group-hover:opacity-100 transition-all ease-out duration-200 rounded-full flex items-center justify-end">
