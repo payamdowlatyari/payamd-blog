@@ -65,9 +65,13 @@ export default function Header() {
                 Login
               </Link>
             )}
-            {user && <div>{user.name}</div>}
           </div>
         </Nav>
+        <div className="flex justify-start m-1">
+          {user?.name && (
+            <p className="text-base text-gray-600">Welcome, {user.name}!</p>
+          )}
+        </div>
       </Container>
     </header>
   );
