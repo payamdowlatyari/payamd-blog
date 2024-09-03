@@ -45,13 +45,13 @@ export default function NotePage({
                     {film.excerpt && film.excerpt.length > 150
                       ? film.excerpt.substring(0, 150) + "..."
                       : film.excerpt}
-
                     <Link
                       href="/films/[slug]"
                       as={`/films/${film.slug}`}
-                      className="font-sans font-semibold hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                      className="font-sans hover:no-underline hover:text-gray-600 transition-colors duration-300"
                     >
-                      Read more
+                      {" "}
+                      Read more..
                     </Link>
                   </p>
                   <p className=" text-neutral-500">

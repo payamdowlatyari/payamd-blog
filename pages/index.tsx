@@ -16,7 +16,7 @@ function HomePage({
     <Container>
       <div className="flex flex-wrap justify-center items-center my-8">
         <div className="group flex flex-wrap max-w-md overflow-hidden rounded-lg border bg-gray-100 select-none hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
-          <div className="w-full">
+          <div className="w-full relative">
             <Image
               src={latestPost.img}
               alt={latestPost.title}
@@ -25,10 +25,13 @@ function HomePage({
               height={300}
               loading="lazy"
             />
+            <Link href={`/posts/${latestPost.slug}`}>
+              <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-70 transition duration-300 ease-in-out hover:opacity-100" />
+            </Link>
           </div>
           <div className="max-w-md p-4">
             <Link
-              href="/posts"
+              href={`/posts/${latestPost.slug}`}
               className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
             >
               {latestPost.title}
@@ -42,10 +45,10 @@ function HomePage({
             </p>
             <div className="opacity-0 -translate-x-2 flex-shrink-0 group-hover:translate-x-0 py-1 px-2.5 text-[0.6rem] group-hover:opacity-100 transition-all ease-out duration-200 rounded-full flex items-center justify-end">
               <Link
-                href={`/posts/${latestPost.slug}`}
+                href="/posts"
                 className="font-sans text-sm hover:no-underline hover:text-slate-800 transition-colors duration-300"
               >
-                Read more
+                More Posts
               </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +67,7 @@ function HomePage({
         </div>
         <div className="flex flex-col flex-wrap justify-center my-4">
           <div className="flex flex-wrap md:flex-nowrap max-w-lg m-2 group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
-            <div className="mr-2 min-w-44 w-full">
+            <div className="mr-2 min-w-44 w-full relative">
               <Image
                 src={latestBook.img}
                 alt={latestBook.title}
@@ -73,10 +76,13 @@ function HomePage({
                 height={150}
                 loading="lazy"
               />
+              <Link href={`/books/${latestBook.slug}`}>
+                <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-50 transition duration-300 ease-in-out hover:opacity-100" />
+              </Link>
             </div>
             <div className="p-2">
               <Link
-                href="/books"
+                href={`/books/${latestBook.slug}`}
                 className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
               >
                 {latestBook.title}
@@ -94,11 +100,10 @@ function HomePage({
               </p>
               <div className="opacity-0 -translate-x-2 flex-shrink-0 group-hover:translate-x-0 py-1 px-2.5 text-[0.6rem] group-hover:opacity-100 transition-all ease-out duration-200 rounded-full flex items-center justify-end">
                 <Link
-                  as={`/books/${latestBook.slug}`}
-                  href={"/books/[slug]"}
+                  href="/books"
                   className="font-sans text-sm hover:no-underline hover:text-gray-600 transition-colors duration-300"
                 >
-                  Read more
+                  More Books
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +121,7 @@ function HomePage({
             </div>
           </div>
           <div className="flex flex-wrap md:flex-nowrap max-w-lg m-2 group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
-            <div className="mr-2 min-w-44 w-full">
+            <div className="mr-2 min-w-44 w-full relative">
               <Image
                 src={latestFilm.img}
                 alt={latestFilm.title}
@@ -125,10 +130,13 @@ function HomePage({
                 height={150}
                 loading="lazy"
               />
+              <Link href={`/films/${latestFilm.slug}`}>
+                <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-50 transition duration-300 ease-in-out hover:opacity-100" />
+              </Link>
             </div>
             <div className="p-2">
               <Link
-                href="/films"
+                href={`/films/${latestFilm.slug}`}
                 className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
               >
                 {latestFilm.title}
@@ -146,11 +154,10 @@ function HomePage({
               </p>
               <div className="opacity-0 -translate-x-2 flex-shrink-0 group-hover:translate-x-0 py-1 px-2.5 text-[0.6rem] group-hover:opacity-100 transition-all ease-out duration-200 rounded-full flex items-center justify-end">
                 <Link
-                  as={`/films/${latestFilm.slug}`}
-                  href="/films/[slug]"
+                  href="/films"
                   className="font-sans text-sm hover:no-underline hover:text-gray-600 transition-colors duration-300"
                 >
-                  Read more
+                  More Films
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

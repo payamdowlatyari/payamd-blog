@@ -11,7 +11,7 @@ export default function NotePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <h1 className="text-4xl font-bold font-sans ml-5 mb-10">Posts</h1>
+      <h1 className="text-3xl font-bold font-sans ml-5 mb-10">Posts</h1>
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {allPosts.length ? (

@@ -18,19 +18,19 @@ export default function NotePage({
             allBooks.map((book) => (
               <article
                 key={book.slug}
-                className="flex flex-row items-center font-sans leading-6  border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
+                className="flex flex-row items-center font-sans leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
               >
                 <div className="w-auto min-w-40 max-w-xs">
                   <Image
                     src={book.img}
                     alt="book"
-                    className="object-cover w-full rounded md:h-60"
+                    className="object-cover w-full rounded h-full"
                     width={100}
                     height={60}
                     loading="lazy"
                   />
                 </div>
-                <div className="m-1 px-2 max-w-sm">
+                <div className="m-1 px-2 max-w-md">
                   <Link
                     as={`/books/${book.slug}`}
                     href="/books/[slug]"
@@ -49,9 +49,10 @@ export default function NotePage({
                     <Link
                       href="/books/[slug]"
                       as={`/books/${book.slug}`}
-                      className="font-sans font-semibold hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                      className="font-sans hover:no-underline hover:text-gray-600 transition-colors duration-300"
                     >
-                      Read more
+                      {" "}
+                      Read more...
                     </Link>
                   </p>
                   <p className=" text-neutral-500">

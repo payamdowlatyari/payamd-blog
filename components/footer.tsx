@@ -4,7 +4,7 @@ import { Social } from "./social";
 export default function Footer() {
   return (
     <footer className="md:flex flex-col md:items-center md:justify-between p-2 md:p-2 xl:p-4 bottom-0">
-      <div className="mb-1 md:mb-0 border-gray-300">
+      <div className="mb-1 md:mb-0">
         <ul className="flex flex-wrap justify-center">
           <li>
             <Link
@@ -49,7 +49,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className="flex justify-between w-full px-4 pt-2 ">
+      <div className="flex justify-between w-full px-4 pt-2 border-t border-gray-300">
         <div className="sm:flex sm:items-center sm:justify-center pt-2">
           <span className="text-sm text-gray-500 sm:text-center">
             © {new Date().getFullYear()}{" "}

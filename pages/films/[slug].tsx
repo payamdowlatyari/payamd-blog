@@ -30,8 +30,8 @@ export default function FilmPage({
         <Loader content="Loading..." />
       ) : (
         <div>
-          <article>
-            <header className="flex flex-wrap">
+          <article className="border bg-gray-100 rounded-lg">
+            <header className="flex flex-wrap p-5">
               <Image
                 src={film.img}
                 alt="post"
@@ -51,7 +51,7 @@ export default function FilmPage({
                 </time>
               </div>
             </header>
-            <p className="flex justify-end content-around">
+            <p className="flex justify-end content-around mr-5">
               <Whisper
                 placement="left"
                 controlId="control-id-hover"

@@ -30,8 +30,8 @@ export default function PostPage({
         <Loader content="Loading..." />
       ) : (
         <div>
-          <article>
-            <header className="flex flex-wrap">
+          <article className="border bg-gray-100 rounded-lg">
+            <header className="flex flex-wrap p-5">
               <Image
                 src={post.img}
                 alt="post"
@@ -52,7 +52,7 @@ export default function PostPage({
                 </time>
               </div>
             </header>
-            <p className="flex justify-end content-around">
+            <p className="flex justify-end content-around pr-4">
               <Whisper
                 placement="left"
                 controlId="control-id-hover"
@@ -71,7 +71,7 @@ export default function PostPage({
               </Whisper>
             </p>
             <div
-              className="text-base mt-10 font-sans"
+              className="text-base mt-10 font-sans bg-gray-100 p-5 rounded"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>

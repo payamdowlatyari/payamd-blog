@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>My Web Blog</title>
       </Head>
       <Header />
-      <main className="py-5 mx-auto w-full max-w-6xl min-h-[calc(100vh-200px)]">
+      <main className="py-5 my-5 mx-auto w-full max-w-6xl min-h-[calc(100vh-200px)]">
         <Component {...pageProps} />
       </main>
       <Footer />

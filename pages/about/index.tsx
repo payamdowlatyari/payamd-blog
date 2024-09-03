@@ -7,12 +7,9 @@ export default function AboutPage() {
     <>
       <h1 className="text-4xl font-bold font-sans mb-10 ml-5">About</h1>
       <Container>
-        <div className="flex flex-row-reverse flex-wrap-reverse justify-evenly items-center my-4">
-          <div className="space-y-2 max-w-xl p-4">
-            <h1 className="font-sans text-3xl font-bold">
-              Welcome to My Blog!
-            </h1>
-            <h4 className="font-sans text-lg font-semibold">
+        <div className="flex flex-row-reverse flex-wrap-reverse justify-center md:justify-between items-center my-4 bg-gray-100 rounded-md">
+          <div className="space-y-2 max-w-xl lg:max-w-2xl p-4">
+            <h4 className="font-sans text-2xl font-semibold">
               My name is Payam Dowlatyari.{" "}
             </h4>
 

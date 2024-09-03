@@ -1,10 +1,42 @@
 import Link from "next/link";
 import Container from "../components/container";
-import { Nav } from "rsuite";
+import { Nav, Dropdown, Avatar } from "rsuite";
 import { useAuth0 } from "@auth0/auth0-react";
 
+function Profile() {
+  const { user, logout } = useAuth0();
+  return (
+    <Dropdown
+      trigger="click"
+      placement="bottomEnd"
+      renderToggle={(props) => (
+        <Avatar
+          {...props}
+          circle
+          src={user?.picture}
+          alt={user?.name}
+          style={{ width: 35, height: 35, cursor: "pointer" }}
+        />
+      )}
+    >
+      <Dropdown.Item style={{ padding: 10, width: 150 }}>
+        <p className="font-thin normal-case">Signed in as</p>
+        <p className="font-thin normal-case">{user?.email}</p>
+      </Dropdown.Item>
+      <Dropdown.Separator />
+      <Dropdown.Item style={{ fontWeight: "bold" }} onClick={() => logout()}>
+        Logout
+      </Dropdown.Item>
+    </Dropdown>
+  );
+}
+
 export default function Header() {
-  const { isAuthenticated, loginWithPopup, logout, user } = useAuth0();
+  const { isAuthenticated, loginWithPopup, user } = useAuth0();
+
+  if (isAuthenticated) {
+    console.log(user);
+  }
   return (
     <header className="mb-6">
       <Container>
@@ -45,15 +77,7 @@ export default function Header() {
           </div>
           <div className="flex justify-end mt-2">
             {isAuthenticated ? (
-              <Link
-                href="/"
-                className="font-sans font-semibold uppercase text-gray-800 no-underline hover:no-underline hover:text-gray-600 focus:no-underline focus:text-gray-600 transition-colors duration-300"
-                onClick={() => {
-                  logout();
-                }}
-              >
-                Logout
-              </Link>
+              <Profile />
             ) : (
               <Link
                 href="/"
@@ -67,9 +91,6 @@ export default function Header() {
             )}
           </div>
         </Nav>
-        <div className="flex justify-end">
-          {user?.name && <p className="text-sm text-gray-500">{user.name}</p>}
-        </div>
       </Container>
     </header>
   );
