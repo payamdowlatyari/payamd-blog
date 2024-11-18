@@ -14,22 +14,22 @@ function HomePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
-      <div className="flex flex-wrap justify-center items-center my-8">
-        <div className="group flex flex-wrap max-w-md overflow-hidden rounded-lg border bg-gray-100 select-none hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
+        <div className="group flex flex-wrap max-w-lg overflow-hidden rounded-lg border bg-gray-100 select-none hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
           <div className="w-full relative">
             <Image
               src={latestPost.img}
               alt={latestPost.title}
-              className="rounded"
+              className="rounded w-full"
               width={450}
-              height={300}
+              height={400}
               loading="lazy"
             />
             <Link href={`/posts/${latestPost.slug}`}>
               <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-70 transition duration-300 ease-in-out hover:opacity-100" />
             </Link>
           </div>
-          <div className="max-w-md p-4">
+          <div className="p-4">
             <Link
               href={`/posts/${latestPost.slug}`}
               className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
@@ -65,13 +65,13 @@ function HomePage({
             </div>
           </div>
         </div>
-        <div className="flex flex-col flex-wrap justify-center my-4">
-          <div className="flex flex-wrap md:flex-nowrap max-w-lg m-2 group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
+        <div className="flex flex-col flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap md:flex-nowrap max-w-lg group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
             <div className="mr-2 min-w-44 w-full relative">
               <Image
                 src={latestBook.img}
                 alt={latestBook.title}
-                className="rounded"
+                className="rounded w-full"
                 width={250}
                 height={150}
                 loading="lazy"
@@ -120,12 +120,12 @@ function HomePage({
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap max-w-lg m-2 group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
+          <div className="flex flex-wrap md:flex-nowrap max-w-lg group leading-6 border bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out">
             <div className="mr-2 min-w-44 w-full relative">
               <Image
                 src={latestFilm.img}
                 alt={latestFilm.title}
-                className="rounded"
+                className="rounded w-full"
                 width={250}
                 height={150}
                 loading="lazy"

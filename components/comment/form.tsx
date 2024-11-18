@@ -30,7 +30,7 @@ export default function CommentForm({
 
       <div className="flex items-center mt-4">
         {isAuthenticated ? (
-          <div className="flex items-center space-x-6">
+          <div className="flex w-full items-center justify-between space-x-6">
             <button
               className="bg-teal-500 hover:bg-teal-700 active:bg-teal-800 px-4 py-2 w-36 rounded-md text-white transition-colors duration-300"
               type="submit"
@@ -39,7 +39,7 @@ export default function CommentForm({
               Send
             </button>
             <button
-              className="text-gray-900 px-4 py-2 w-36 rounded-md hover:bg-gray-100 transition-colors duration-300"
+              className="text-white px-4 py-2 w-36 rounded-md bg-danger-700 hover:bg-danger-800 transition-colors duration-300"
               onClick={() =>
                 logout({ logoutParams: { returnTo: window.location.origin } })
               }
@@ -49,7 +49,7 @@ export default function CommentForm({
           </div>
         ) : (
           <button
-            className="text-gray-900 px-4 py-2 w-36 rounded-md hover:bg-gray-100 transition-colors duration-300"
+            className="text-gray-950 px-4 py-2 w-36 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors duration-300"
             onClick={() => loginWithPopup()}
           >
             Log In

@@ -32,11 +32,8 @@ function Profile() {
 }
 
 export default function Header() {
-  const { isAuthenticated, loginWithPopup, user } = useAuth0();
+  const { isAuthenticated, loginWithPopup } = useAuth0();
 
-  if (isAuthenticated) {
-    console.log(user);
-  }
   return (
     <header className="mb-6">
       <Container>

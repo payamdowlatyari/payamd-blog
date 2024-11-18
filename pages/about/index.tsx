@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <>
-      <h1 className="text-4xl font-bold font-sans mb-10 ml-5">About</h1>
+      <h1 className="text-3xl font-bold font-sans mb-10 ml-5">About</h1>
       <Container>
         <div className="flex flex-row-reverse flex-wrap-reverse justify-center md:justify-between items-center my-4 bg-gray-100 rounded-md">
-          <div className="space-y-2 max-w-xl lg:max-w-2xl p-4">
+          <div className="space-y-2 max-w-xl lg:max-w-2xl p-2">
             <h4 className="font-sans text-2xl font-semibold">
               My name is Payam Dowlatyari.{" "}
             </h4>
@@ -71,9 +71,9 @@ export default function AboutPage() {
 
           <div className="max-w-md">
             <Image
-              src="/me-hat.jpeg"
+              src="/me-ai-hat.jpeg"
               alt="my photo"
-              className="rounded"
+              className="rounded opacity-90 hover:opacity-100 transition-opacity duration-300"
               width={400}
               height={400}
               loading="lazy"
