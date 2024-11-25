@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="robots" content="follow, index" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       </Head>
-      <body className="bg-gray-50 text-gray-800 antialiased">
+      <body className="text-gray-900 bg-gray-50 antialiased">
         <Main />
         <NextScript />
       </body>

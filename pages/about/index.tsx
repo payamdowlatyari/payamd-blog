@@ -40,6 +40,14 @@ export default function AboutPage() {
                 </Link>
                 ,{" "}
                 <Link
+                  href="https://medium.com/@pdowlatyari"
+                  className="font-sans font-semibold hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                  target="_blank"
+                >
+                  Medium
+                </Link>
+                ,{" "}
+                <Link
                   href="https://github.com/payamdowlatyari"
                   className="font-sans font-semibold hover:no-underline hover:text-gray-600 transition-colors duration-300"
                   target="_blank"

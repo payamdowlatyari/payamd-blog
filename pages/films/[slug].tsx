@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Link from "next/link";
 import Image from "next/image";
-import Comment from "../../components/comment";
 import Container from "../../components/container";
 import distanceToNow from "../../lib/dateRelative";
 import { getAllFilms, getFilmBySlug } from "../../lib/getFilm";
@@ -13,6 +12,7 @@ import Head from "next/head";
 
 export default function FilmPage({
   film,
+  randomFilms,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
 
@@ -81,8 +81,45 @@ export default function FilmPage({
               />
             </div>
           </article>
+          <h3 className="text-2xl font-bold font-sans mt-20 mb-10 ml-5">
+            You might also like
+          </h3>
 
-          <Comment />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-4 rounded-md">
+            {randomFilms.map((film) => (
+              <div
+                key={film.slug}
+                className="space-y-2 max-w-xl lg:max-w-2xl p-1 m-1 flex flex-wrap bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
+              >
+                <Image
+                  src={film.img}
+                  alt="book"
+                  className="object-cover w-40 rounded h-auto"
+                  width={100}
+                  height={60}
+                  loading="lazy"
+                />
+
+                <div className="m-2 p-2 w-auto min-w-40 max-w-xs">
+                  <Link
+                    as={`/films/${film.slug}`}
+                    href="/films/[slug]"
+                    className="font-sans font-bold text-lg my-2 hover:no-underline hover:text-gray-600 transition-colors duration-300"
+                  >
+                    {film.title}
+                  </Link>
+                  <p className="font-sans text-md text-gray-600 font-semibold my-1">
+                    {film.director}
+                  </p>
+                  <p className="font-sans text-md">{film.excerpt}</p>
+
+                  <time className="flex mt-2 text-gray-400">
+                    {distanceToNow(new Date(film.date))}
+                  </time>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </Container>
@@ -109,12 +146,29 @@ export async function getStaticProps({ params }: Params) {
   ]);
   const content = await markdownToHtml(film.content || "");
 
+  // get two random films
+  const allFilms = getAllFilms([
+    "slug",
+    "title",
+    "excerpt",
+    "date",
+    "img",
+    "imdb",
+    "rate",
+    "director",
+  ]);
+  const randomFilms = allFilms
+    .filter((film) => film.slug !== params.slug)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2);
+
   return {
     props: {
       film: {
         ...film,
         content,
       },
+      randomFilms,
     },
   };
 }

@@ -1,7 +1,6 @@
 import type { InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Comment from "../../components/comment";
 import Container from "../../components/container";
 import distanceToNow from "../../lib/dateRelative";
 import { getAllPosts, getPostBySlug } from "../../lib/getPost";
@@ -13,6 +12,7 @@ import { Whisper, Tooltip, Loader } from "rsuite";
 
 export default function PostPage({
   post,
+  randomPosts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
 
@@ -76,7 +76,45 @@ export default function PostPage({
             />
           </article>
 
-          <Comment />
+          <h3 className="text-2xl font-bold font-sans mt-20 mb-10 ml-5">
+            You may also like
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {randomPosts.map((post) => (
+              <div
+                key={post.slug}
+                className="space-y-2 max-w-xl lg:max-w-2xl p-1 m-1 flex flex-wrap bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
+              >
+                <Image
+                  src={post.img}
+                  alt="post"
+                  className="object-cover h-auto rounded"
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                />
+                <div className="m-2 p-2 w-auto min-w-40 max-w-xs">
+                  <Link
+                    as={`/posts/${post.slug}`}
+                    href="/posts/[slug]"
+                    className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
+                  >
+                    {post.title}
+                  </Link>
+
+                  <p className="font-sans text-md text-gray-600 font-semibold my-1">
+                    {post.author}
+                  </p>
+                  <p className="font-sans text-md">{post.excerpt}</p>
+
+                  <time className="flex mt-2 text-gray-400">
+                    {distanceToNow(new Date(post.date))}
+                  </time>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </Container>
@@ -102,12 +140,28 @@ export async function getStaticProps({ params }: Params) {
   ]);
   const content = await markdownToHtml(post.content || "");
 
+  // get two random posts
+  const allPosts = getAllPosts([
+    "slug",
+    "title",
+    "excerpt",
+    "date",
+    "author",
+    "img",
+    "medium",
+  ]);
+  const randomPosts = allPosts
+    .filter((post) => post.slug !== params.slug)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2);
+
   return {
     props: {
       post: {
         ...post,
         content,
       },
+      randomPosts,
     },
   };
 }
