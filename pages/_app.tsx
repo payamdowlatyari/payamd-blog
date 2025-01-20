@@ -6,7 +6,22 @@ import Header from "../components/header";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Footer from "../components/footer";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+/**
+ * The top-level component for the app.
+ *
+ * This component is responsible for rendering the main application structure,
+ * including the header, main content area, and footer. It also sets up the
+ * authentication provider using the `Auth0Provider` component.
+ *
+ * @param {AppProps} props The props for the app.
+ * @param {React.ComponentType} props.Component The component to render for the main content area.
+ * @param {object} props.pageProps The props for the page component.
+ * @returns {React.ReactElement} The rendered app component.
+ */
+export default function MyApp({
+  Component,
+  pageProps,
+}: AppProps): React.ReactElement {
   return (
     <Auth0Provider
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}

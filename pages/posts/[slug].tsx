@@ -6,14 +6,21 @@ import distanceToNow from "../../lib/dateRelative";
 import { getAllPosts, getPostBySlug } from "../../lib/getPost";
 import markdownToHtml from "../../lib/markdownToHtml";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import { Whisper, Tooltip, Loader } from "rsuite";
+import { Loader } from "rsuite";
+import { PostCard } from "../../components/cards/PostCard";
+import { MediumLink } from "../../components/ui/links";
 
+/**
+ * A page that displays a single post with its title, author, excerpt, publication date, a link to the post's page on medium.com, and a link to the post's page on this website.
+ *
+ * @param {{ post: Post, randomPosts: Post[] }} - The post data to render in the page.
+ * @returns {JSX.Element} - The JSX element representing the PostPage component.
+ */
 export default function PostPage({
   post,
   randomPosts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   const router = useRouter();
 
   if (!router.isFallback && !post?.slug) {
@@ -22,16 +29,14 @@ export default function PostPage({
 
   return (
     <Container>
-      <Head>
-        <title>{post.title} | My Web Blog</title>
-      </Head>
+      <Head>{post.title && <title>{post.title} | My Web Blog</title>}</Head>
 
       {router.isFallback ? (
         <Loader content="Loading..." />
       ) : (
-        <div>
-          <article className="border bg-gray-100 rounded-lg">
-            <header className="flex flex-wrap p-5">
+        <div className="bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200">
+          <article className="bg-neutral-100 dark:bg-neutral-950">
+            <header className="flex flex-wrap md:flex-nowrap p-5">
               <Image
                 src={post.img}
                 alt="post"
@@ -42,77 +47,38 @@ export default function PostPage({
               />
 
               <div className="flex flex-col mt-5 max-w-3xl">
-                <h1 className="text-3xl font-bold font-sans">{post.title}</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold ">
+                  {post.title}
+                </h1>
                 {post.excerpt ? (
-                  <p className="mt-2 text-lg font-sans">{post.excerpt}</p>
+                  <p className="mt-2 text-base md:text-lg text-neutral-600 dark:text-neutral-400 ">
+                    {post.excerpt}
+                  </p>
                 ) : null}
-                <p className="font-sans uppercase"> {post.author}</p>
-                <time className="flex mt-2 text-gray-400">
+                <p className="font-semibold text-neutral-800 dark:text-neutral-200">
+                  {post.author}
+                </p>
+                <time className="flex mt-2 text-neutral-400">
                   {distanceToNow(new Date(post.date))}
                 </time>
               </div>
             </header>
             <p className="flex justify-end content-around pr-4">
-              <Whisper
-                placement="left"
-                controlId="control-id-hover"
-                trigger="hover"
-                speaker={<Tooltip>read this article on medium.com</Tooltip>}
-              >
-                <Link href={post.medium} target="_blank">
-                  <Image
-                    src="/Medium_logo.svg.png"
-                    alt="book"
-                    className="rounded inline-block"
-                    width={100}
-                    height={20}
-                  />
-                </Link>
-              </Whisper>
+              <MediumLink url={post.medium} />
             </p>
             <div
-              className="text-base mt-10 font-sans bg-gray-100 p-5 rounded"
+              className="text-base mt-10 bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 p-5"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
 
-          <h3 className="text-2xl font-bold font-sans mt-20 mb-10 ml-5">
+          <h3 className="text-2xl font-bold  mt-20 mb-10 ml-5">
             You may also like
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {randomPosts.map((post) => (
-              <div
-                key={post.slug}
-                className="space-y-2 max-w-xl lg:max-w-2xl p-1 m-1 flex flex-wrap bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-400 transition-shadow duration-300 ease-in-out"
-              >
-                <Image
-                  src={post.img}
-                  alt="post"
-                  className="object-cover h-auto rounded"
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                />
-                <div className="m-2 p-2 w-auto min-w-40 max-w-xs">
-                  <Link
-                    as={`/posts/${post.slug}`}
-                    href="/posts/[slug]"
-                    className="font-sans font-bold text-lg hover:no-underline hover:text-slate-800 transition-colors duration-300"
-                  >
-                    {post.title}
-                  </Link>
-
-                  <p className="font-sans text-md text-gray-600 font-semibold my-1">
-                    {post.author}
-                  </p>
-                  <p className="font-sans text-md">{post.excerpt}</p>
-
-                  <time className="flex mt-2 text-gray-400">
-                    {distanceToNow(new Date(post.date))}
-                  </time>
-                </div>
-              </div>
+              <PostCard key={post.slug} post={post} />
             ))}
           </div>
         </div>

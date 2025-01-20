@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { Social } from "./social";
 
+/**
+ * The site footer.
+ *
+ * @returns The site footer.
+ */
 export default function Footer() {
   return (
     <footer aria-labelledby="footer-heading">
@@ -17,14 +22,14 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-base font-bold leading-6 text-gray-500">
                   Pages
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
                       href="/"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                     >
                       Home
                     </Link>
@@ -32,7 +37,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/about"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                     >
                       About
                     </Link>
@@ -40,21 +45,21 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-base font-bold leading-6 text-gray-500">
                   Topics
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
                       href="/posts"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                     >
                       Posts
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                       href="/books"
                     >
                       Books
@@ -62,7 +67,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                       href="/films"
                     >
                       Films
@@ -73,13 +78,13 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-base font-bold leading-6 text-gray-500">
                   Links
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                       href="https://payamd.com"
                     >
                       Payam's Website
@@ -87,7 +92,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
                       href="https://photo.payamd.com"
                     >
                       Photography
@@ -98,12 +103,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-4 sm:mt-10 lg:mt-12">
-          <p className="text-xs leading-5 text-gray-500">
+        <div className="mt-16 border-t border-gray-100/20 pt-4 sm:mt-10 lg:mt-12">
+          <p className="text-xs leading-5 text-gray-400">
             &copy; {new Date().getFullYear()}{" "}
             <Link
               href="https://www.payamd.com"
-              className="font-sans font-semibold px-1 text-gray-600 hover:text-gray-900 hover:no-underline focus:no-underline hover:duration-500"
+              className="font-sans font-semibold px-1 text-gray-300 hover:text-gray-100 hover:no-underline focus:no-underline hover:duration-500"
             >
               payamd.com
             </Link>

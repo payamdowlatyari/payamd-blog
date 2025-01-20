@@ -1,45 +1,30 @@
-import Link from "next/link";
 import Container from "../components/container";
 import { Nav } from "rsuite";
+import { LinkOverlay } from "./ui/links";
 
-export default function Header() {
+/**
+ * Header component
+ *
+ * This component renders the main navigation header for the application. It includes
+ * links to various sections of the website such as Home, About, Posts, Books, and Films.
+ * The navigation is displayed in a flexible layout that adjusts for different screen sizes.
+ *
+ * @returns {JSX.Element} The rendered header component with navigation links.
+ */
+
+export default function Header(): JSX.Element {
   return (
     <header className="mb-6">
       <Container>
         <Nav className="flex flex-col sm:flex-row sm:justify-between font-semibold uppercase">
-          <div className="mt-2">
-            <Link
-              href="/"
-              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
-            >
-              About
-            </Link>
+          <div className="flex">
+            <LinkOverlay url="/" title="Home" />
+            <LinkOverlay url="/about" title="About" />
           </div>
-          <div className="mt-2">
-            <Link
-              href="/posts"
-              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
-            >
-              Posts
-            </Link>
-            <Link
-              href="/books"
-              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
-            >
-              Books
-            </Link>
-            <Link
-              href="/films"
-              className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-600 hover:text-gray-900 duration-300 ease-in-out"
-            >
-              Films
-            </Link>
+          <div className="flex">
+            <LinkOverlay url="/posts" title="Posts" />
+            <LinkOverlay url="/books" title="Books" />
+            <LinkOverlay url="/films" title="Films" />
           </div>
         </Nav>
       </Container>
