@@ -1,6 +1,7 @@
 import Container from "../components/container";
 import { Nav } from "rsuite";
 import { LinkOverlay } from "./ui/links";
+import { ThemeButton } from "./ui/ThemeButton";
 
 /**
  * Header component
@@ -25,6 +26,9 @@ export default function Header(): JSX.Element {
             <LinkOverlay url="/posts" title="Posts" />
             <LinkOverlay url="/books" title="Books" />
             <LinkOverlay url="/films" title="Films" />
+          </div>
+          <div className="flex">
+            <ThemeButton />
           </div>
         </Nav>
       </Container>

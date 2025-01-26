@@ -6,8 +6,7 @@ import { PostCard } from "../../components/cards/PostCard";
 /**
  * Renders a page displaying a list of blog posts.
  *
- * @param {Object} props - The component props.
- * @param {Array} props.allPosts - An array of all post objects to be displayed.
+ * @param {{ allPosts: Post[] }} - The props for the page, which includes an array of all posts.
  * @returns {JSX.Element} The JSX element representing the posts page.
  */
 

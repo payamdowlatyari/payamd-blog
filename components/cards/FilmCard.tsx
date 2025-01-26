@@ -15,7 +15,7 @@ export const FilmCard = ({ film }: Film): JSX.Element => {
     <Link
       key={film.slug}
       href={`/films/${film.slug}`}
-      className="flex flex-row flex-wrap md:flex-nowrap rounded-xl hover:no-underline border border-black/10 dark:border-white/10 hover:border-white/30 bg-neutral-100 dark:border-white/10 dark:bg-neutral-950 transition-colors duration-300"
+      className="flex flex-row flex-wrap md:flex-nowrap rounded-xl hover:no-underline border border-black/10 hover:border-white/30 bg-neutral-100 dark:border-white/10 dark:bg-neutral-950 transition-colors duration-300"
     >
       <span className="absolute -top-px right-5 hidden h-px w-80 bg-gradient-to-l from-transparent via-black/10 via-10% to-transparent dark:block dark:via-white/30" />
 

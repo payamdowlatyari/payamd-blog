@@ -9,7 +9,7 @@ export const Social = () => {
       <ul className="mb-4 -ml-2 flex md:order-1 md:mb-0">
         <li>
           <a
-            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-300 hover:text-gray-950 hover:bg-gray-100 focus:ring-gray-700 transition duration-500 ease-in-out"
+            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-600 dark:text-gray-300 hover:text-gray-50 dark:hover:text-gray-950 hover:bg-gray-700 dark:hover:bg-gray-100 focus:ring-gray-100 dark:focus:ring-gray-700 transition duration-500 ease-in-out"
             aria-label="Twitter"
             href="https://twitter.com/payamdowlatyari"
             target="_blank"
@@ -30,7 +30,7 @@ export const Social = () => {
 
         <li>
           <a
-            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-300 hover:text-gray-950 hover:bg-gray-100 focus:ring-gray-700 transition duration-500 ease-in-out"
+            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-600 dark:text-gray-300 hover:text-gray-50 dark:hover:text-gray-950 hover:bg-gray-700 dark:hover:bg-gray-100 focus:ring-gray-100 dark:focus:ring-gray-700 transition duration-500 ease-in-out"
             aria-label="LinkedIn"
             target="_blank"
             href="https://www.linkedin.com/in/payamdowlatyari/"
@@ -50,7 +50,7 @@ export const Social = () => {
 
         <li>
           <a
-            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-300 hover:text-gray-950 hover:bg-gray-100 focus:ring-gray-700 transition duration-500 ease-in-out"
+            className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm focus:outline-none focus:ring-4 text-gray-600 dark:text-gray-300 hover:text-gray-50 dark:hover:text-gray-950 hover:bg-gray-700 dark:hover:bg-gray-100 focus:ring-gray-100 dark:focus:ring-gray-700 transition duration-500 ease-in-out"
             aria-label="Github"
             href="https://github.com/payamdowlatyari"
             target="_blank"

@@ -22,14 +22,14 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-bold leading-6 text-gray-500">
+                <h3 className="text-lg font-semibold leading-6 text-gray-600 dark:text-gray-500">
                   Pages
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
                       href="/"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                     >
                       Home
                     </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/about"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                     >
                       About
                     </Link>
@@ -45,21 +45,21 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-base font-bold leading-6 text-gray-500">
+                <h3 className="text-lg font-semibold leading-6 text-gray-600 dark:text-gray-500">
                   Topics
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
                       href="/posts"
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                     >
                       Posts
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                       href="/books"
                     >
                       Books
@@ -67,7 +67,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                       href="/films"
                     >
                       Films
@@ -78,21 +78,21 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-bold leading-6 text-gray-500">
+                <h3 className="text-lg font-semibold leading-6 text-gray-600 dark:text-gray-500">
                   Links
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                       href="https://payamd.com"
                     >
-                      Payam's Website
+                      Website
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-gray-200 hover:text-gray-50 duration-300 ease-in-out"
+                      className="mr-2 hover:no-underline focus:no-underline md:mr-4 text-sm leading-6 text-neutral-700 hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-neutral-50 duration-300 ease-in-out"
                       href="https://photo.payamd.com"
                     >
                       Photography

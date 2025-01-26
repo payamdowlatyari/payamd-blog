@@ -21,11 +21,11 @@ export default function Page({
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <Container>
-      <div className="flex flex-wrap justify-center items-center gap-2 mt-8">
-        <div className="flex flex-col w-full sm:w-3/5 md:w-2/5 gap-2">
+      <div className="flex flex-wrap justify-center items-center h-full gap-2 mt-8">
+        <div className="flex flex-col w-full md:w-2/5 gap-2">
           <PostCard post={latestPost} />
         </div>
-        <div className="flex flex-col w-full sm:w-3/5 md:w-2/5 gap-2">
+        <div className="flex flex-col w-full md:w-2/5 gap-2">
           <BookCard book={latestBook} />
           <FilmCard film={latestFilm} />
         </div>

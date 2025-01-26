@@ -23,7 +23,7 @@ export function LinkOverlay({
   return (
     <Link
       href={url}
-      className="px-2 py-1 m-1 md:px-4 md:py-2 md:m-2 text-neutral-100 hover:text-neutral-100 focus:text-neutral-100"
+      className="px-2 py-1 m-1 md:px-4 md:py-2 md:m-2 text-neutral-700 dark:text-neutral-100 hover:no-underline hover:text-neutral-700 dark:hover:text-neutral-100 focus:text-neutral-700 dark:focus:text-neutral-100 transition-colors duration-300"
     >
       <div className="relative overflow-hidden group font-bold">
         <span className="invisible">{title}</span>
@@ -59,7 +59,7 @@ export function AnimatedUnderlinedLink({
   return (
     <Link
       href={url}
-      className="relative font-bold my-2 hover:no-underline after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-200 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100"
+      className="relative font-bold my-2 hover:no-underline after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-700 dark:after:bg-neutral-200 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100"
     >
       <span className="text-neutral-700 dark:text-neutral-200">{title}</span>
     </Link>
