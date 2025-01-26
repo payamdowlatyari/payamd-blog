@@ -15,7 +15,7 @@ export const PostCard = ({ post }: Post): JSX.Element => {
     <Link
       key={post.slug}
       href={`/posts/${post.slug}`}
-      className=" flex flex-col rounded-xl hover:no-underline border border-black/10 hover:border-white/30 bg-neutral-100 dark:border-white/10 dark:bg-neutral-950 dark:hover:border-white/30 transition-colors duration-300"
+      className=" flex flex-col rounded hover:no-underline border border-black/10 hover:border-black/20 bg-neutral-100 dark:border-white/10 dark:bg-neutral-950 dark:hover:border-white/30 transition-colors duration-300"
     >
       <span className="absolute -top-px right-5 hidden h-px w-80 bg-gradient-to-l from-transparent via-black/10 via-10% to-transparent dark:block dark:via-white/30" />
 
@@ -30,7 +30,7 @@ export const PostCard = ({ post }: Post): JSX.Element => {
         />
       </span>
       <span className="m-2">
-        <span className="p-2 font-bold block text-lg hover:no-underline text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-50 transition-colors duration-300">
+        <span className="p-2 font-bold block text-lg hover:no-underline text-neutral-800 dark:text-neutral-200 transition-colors duration-300">
           {post.title}
         </span>
         <span className="p-2 block font-semibold text-neutral-600 dark:text-neutral-400">

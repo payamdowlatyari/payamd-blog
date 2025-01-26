@@ -104,11 +104,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-100/20 pt-4 sm:mt-10 lg:mt-12">
-          <p className="text-xs leading-5 text-gray-400">
+          <p className="text-xs leading-5 text-gray-600 dark:text-gray-400">
             &copy; {new Date().getFullYear()}{" "}
             <Link
               href="https://www.payamd.com"
-              className="font-sans font-semibold px-1 text-gray-300 hover:text-gray-100 hover:no-underline focus:no-underline hover:duration-500"
+              className="font-sans font-semibold px-1 text-gray-700 dark:text-gray-300 hover:text-gray-950 dark:hover:text-gray-100 hover:no-underline focus:no-underline hover:duration-500"
             >
               payamd.com
             </Link>

@@ -36,7 +36,7 @@ export default function BookPage({
         <Loader content="Loading..." />
       ) : (
         <div>
-          <article className="bg-neutral-100 dark:bg-neutral-950 rounded-lg">
+          <article>
             <header className="flex flex-wrap p-5">
               <Image
                 src={book.img}
@@ -56,7 +56,7 @@ export default function BookPage({
                 <p className="font-semibold text-neutral-800 dark:text-neutral-200">
                   {book.author}
                 </p>
-                <time className="flex mt-2 text-neutral-400">
+                <time className="flex mt-2 text-neutral-400 dark:text-neutral-600">
                   {distanceToNow(new Date(book.date))}
                 </time>
               </div>
@@ -65,10 +65,10 @@ export default function BookPage({
               <GoodreadsLink url={book.goodreads} />
             </p>
 
-            <div className="bg-neutral-100 dark:bg-neutral-950 rounded mt-5 p-5">
+            <div className="mt-5 p-5">
               <h3 className="my-4 text-xl ">My Review:</h3>
               <div
-                className="text-base mt-4 mb-4 "
+                className="text-base mt-4 mb-4"
                 dangerouslySetInnerHTML={{ __html: book.content }}
               />
             </div>

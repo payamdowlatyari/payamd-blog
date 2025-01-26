@@ -35,8 +35,8 @@ export default function FilmPage({
       {router.isFallback ? (
         <Loader content="Loading..." />
       ) : (
-        <div className="bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200">
-          <article className="bg-neutral-100 dark:bg-neutral-950 rounded-lg">
+        <div>
+          <article>
             <header className="flex flex-wrap p-5">
               <Image
                 src={film.img}
@@ -56,7 +56,7 @@ export default function FilmPage({
                 <p className="font-semibold text-neutral-800 dark:text-neutral-200">
                   {film.director}
                 </p>
-                <time className="flex mt-2 text-neutral-400">
+                <time className="flex mt-2 text-neutral-400 dark:text-neutral-600">
                   {distanceToNow(new Date(film.date))}
                 </time>
               </div>
@@ -64,7 +64,7 @@ export default function FilmPage({
             <p className="flex justify-end content-around mr-5">
               <IMDBLink rate={film.rate} url={film.imdb} />
             </p>
-            <div className="bg-neutral-100 dark:bg-neutral-950 rounded mt-5 p-5">
+            <div className="mt-5 p-5">
               <h3 className="my-4 text-xl">My Review:</h3>
 
               <div

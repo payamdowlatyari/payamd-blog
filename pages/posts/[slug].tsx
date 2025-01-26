@@ -34,8 +34,8 @@ export default function PostPage({
       {router.isFallback ? (
         <Loader content="Loading..." />
       ) : (
-        <div className="bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200">
-          <article className="bg-neutral-100 dark:bg-neutral-950">
+        <div>
+          <article>
             <header className="flex flex-wrap md:flex-nowrap p-5">
               <Image
                 src={post.img}
@@ -58,7 +58,7 @@ export default function PostPage({
                 <p className="font-semibold text-neutral-800 dark:text-neutral-200">
                   {post.author}
                 </p>
-                <time className="flex mt-2 text-neutral-400">
+                <time className="flex mt-2 text-neutral-600 dark:text-neutral-400">
                   {distanceToNow(new Date(post.date))}
                 </time>
               </div>
@@ -67,7 +67,7 @@ export default function PostPage({
               <MediumLink url={post.medium} />
             </p>
             <div
-              className="text-base mt-10 bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 p-5"
+              className="text-base mt-10 p-5"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
