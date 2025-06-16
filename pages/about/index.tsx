@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Container from "../../components/container";
 import Image from "next/image";
 import { AnimatedUnderlinedLink } from "../../components/ui/links";
@@ -20,7 +19,6 @@ export default function Page(): JSX.Element {
             <h4 className="text-2xl font-semibold">
               My name is Payam Dowlatyari.{" "}
             </h4>
-
             <p className="text-neutral-600 dark:text-neutral-400">
               I am a Software Engineer and UX Designer, graduated from UC Irvine
               and work in the tech industry. I am a hobbyist photographer and
@@ -34,7 +32,6 @@ export default function Page(): JSX.Element {
               sharing my insights. I provided a comment section for readers who
               would like to share their views with me and others.
             </p>
-
             <div className="flex flex-col justify-center mt-8">
               <h3 className="text-2xl font-bold my-2">Contact</h3>
               <p className="text-neutral-600 dark:text-neutral-400">
@@ -59,7 +56,6 @@ export default function Page(): JSX.Element {
                   url="https://twitter.com/payamdowlatyari"
                 />
               </p>
-
               <p className="text-neutral-600 dark:text-neutral-400 text-md">
                 You can also find me on{" "}
                 <AnimatedUnderlinedLink
@@ -69,7 +65,6 @@ export default function Page(): JSX.Element {
               </p>
             </div>
           </div>
-
           <div className="max-w-md">
             <Image
               src="/me-ai-hat.jpeg"

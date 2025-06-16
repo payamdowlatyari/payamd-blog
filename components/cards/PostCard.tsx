@@ -29,7 +29,7 @@ export const PostCard = ({ post }: Post): JSX.Element => {
           loading="lazy"
         />
       </span>
-      <span className="m-2">
+      <span className="m-2 flex flex-col justify-between">
         <span className="p-2 font-bold block text-lg hover:no-underline text-neutral-800 dark:text-neutral-200 transition-colors duration-300">
           {post.title}
         </span>

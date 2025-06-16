@@ -59,6 +59,7 @@ export function AnimatedUnderlinedLink({
   return (
     <Link
       href={url}
+      target="_blank"
       className="relative font-bold my-2 hover:no-underline after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-700 dark:after:bg-neutral-200 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100"
     >
       <span className="text-neutral-700 dark:text-neutral-200">{title}</span>
@@ -84,11 +85,11 @@ export function MediumLink({ url }: { url: string }): JSX.Element {
     >
       <Link href={url || "#"} target="_blank" className="p-1">
         <Image
-          src="/medium.png"
+          src="/medium.jpeg"
           alt="book"
           className="rounded inline-block"
-          width={80}
-          height={20}
+          width={30}
+          height={30}
         />
       </Link>
     </Whisper>
@@ -128,8 +129,8 @@ export function IMDBLink({
           src="/IMDB_Logo_2016.svg.png"
           alt="film"
           className="rounded inline-block"
-          width={40}
-          height={20}
+          width={50}
+          height={25}
         />
         <span className="ml-2 font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-50">
           {rate}
@@ -155,13 +156,13 @@ export function GoodreadsLink({ url }: { url: string }): JSX.Element {
       trigger="hover"
       speaker={<Tooltip>goodreads.com</Tooltip>}
     >
-      <Link href={url || "#"} target="_blank" className="p-2">
+      <Link href={url || "#"} target="_blank" className="m-1">
         <Image
-          src="/goodreads-logo-white.png"
+          src="/goodreads.png"
           alt="book"
           className="rounded inline-block"
-          width={80}
-          height={20}
+          width={40}
+          height={40}
         />
       </Link>
     </Whisper>

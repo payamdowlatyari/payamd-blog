@@ -29,12 +29,12 @@ export const FilmCard = ({ film }: Film): JSX.Element => {
           loading="lazy"
         />
       </span>
-      <span className="px-2 max-w-sm">
+      <span className="px-2 max-w-sm flex flex-col justify-between">
         <span className="block p-2 font-bold text-lg my-2 hover:no-underline text-neutral-800 dark:text-neutral-200 transition-colors duration-300">
           {film.title}
         </span>
         <span className="block p-2 font-semibold text-neutral-600 dark:text-neutral-400">
-          {film.author}
+          {film.director}
         </span>
         <span className="block p-2 font-normal text-sm leading-[1.5] text-neutral-500 dark:text-neutral-300">
           {film.excerpt && film.excerpt.length > 150

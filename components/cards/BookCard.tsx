@@ -29,7 +29,7 @@ export const BookCard = ({ book }: Book): JSX.Element => {
           loading="lazy"
         />
       </span>
-      <span className="px-2 max-w-md">
+      <span className="px-2 max-w-md flex flex-col justify-between">
         <span className="block p-2 font-bold text-lg text-neutral-800 dark:text-neutral-200">
           {book.title}
         </span>
